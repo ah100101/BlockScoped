@@ -1,15 +1,13 @@
 ---
 home: true
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /quiz/
 features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: Random
+  details: Quiz your knowledge by receiving a random programming interview questions. Questions are linkable for sharing and for future reference.
+- title: Categorized
+  details: All interview questions are grouped by language and categorized by difficulty, required materials, concepts, and many others.
+- title: Open Source
+  details: BlockScoped's library of questions are OpenSourced on GitHub. Wish there were more Elm interview questions? Contribute!
+footer: BlockScoped | Copyright © 2018 - present | Powered by VuePress
 ---
-
-# Hello VuePress
