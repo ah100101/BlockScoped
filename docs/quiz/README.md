@@ -1,1 +1,3 @@
-# Find a Question
+## Get a Random Programming Question
+
+<QuestionFinder />

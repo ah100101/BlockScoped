@@ -9,7 +9,7 @@
     .answer-text(v-show='showAnswer')
       h2(class='answer') Answer
       slot
-      router-link(to='/') Pick Another Question
+      router-link(to='/') Find another question
 </template>  
 
 <script>
