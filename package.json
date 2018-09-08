@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "vuepress dev docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

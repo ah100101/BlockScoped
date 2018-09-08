@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'CodeKnow',
+  title: 'blockscoped',
   description: 'Randomized coding questions by topic and difficulty',
   themeConfig: {
     nav: [
@@ -9,7 +9,7 @@ module.exports = {
     ],
     lastUpdated: 'Last Updated',
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'ah100101/CodeKnow',
+    repo: 'ah100101/blockscoped',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
     // repoLabel: 'Contribute!',
