@@ -9,7 +9,7 @@
     .answer-text(v-show='showAnswer')
       h2(class='answer') Answer
       slot
-      router-link(to='/') Find another question
+      a(v-on:click='findMore()') Find another question
 </template>  
 
 <script>
@@ -25,6 +25,28 @@ export default {
         return 'Hide Answer ↑'
       }
       return 'Show Answer ↓'
+    }
+  },
+  methods: {
+    findMore() {
+      let params = {}
+
+      if (this.$route.query.language) {
+        params.language = this.$route.query.language
+      }
+
+      if (this.$route.query.difficulty) {
+        params.difficulty = this.$route.query.difficulty
+      }
+
+      if (this.$route.query.categories) {
+        params.categories = this.$route.query.categories
+      }
+
+      this.$router.push({
+        path: '/quiz/',
+        query: params
+      })
     }
   }
 }

@@ -96,11 +96,16 @@
       v-bind:class='{ "disabled": !selectionValid }'
       v-on:click='findQuestion'
       ) Get Question
+  transition(name='fade')
+    .warning.custom-block(v-show='noResults')
+      p(class="custom-block-title")
+        p 😭 No questions could be found with those filters 
   
 </template>
 
 <script>
 import categories from '../categories.js'
+import questions from '../questions.js'
 
 const divideArrayInto3 = (arr) => {
   let dividedArray = {
@@ -137,7 +142,8 @@ export default {
       selectedDifficulties: [],
       selectedCategories: [],
       ratingsExpanded: false,
-      categoriesExpanded: false
+      categoriesExpanded: false,
+      noResults: false
     }
   },
   mounted: function () {
@@ -173,9 +179,6 @@ export default {
       }
     }
   },
-  props: [
-    
-  ],
   computed: {
     filterRatingsText: function () {
       let text = 'Filter by question difficulty'
@@ -199,7 +202,6 @@ export default {
     setLanguage(lang) {
       this.selectedLanguage = lang
       this.ratingsExpanded = true
-      this.updateParameters()
     },
     toggleDifficulty(rating) {
       if (this.difficultySet(rating)) {
@@ -208,8 +210,6 @@ export default {
         this.selectedDifficulties.push(rating)
         this.categoriesExpanded = true
       }
-
-      this.updateParameters()
     },
     difficultySet(rating) {
       return this.selectedDifficulties.filter(r => r === rating).length > 0
@@ -220,18 +220,33 @@ export default {
       } else {
         this.selectedCategories.push(category)
       }
-
-      this.updateParameters()
     },
     categorySet(category) {
       return this.selectedCategories.filter(r => r === category).length > 0
     },
     findQuestion() {
+      let state = this
       if (this.selectionValid) {
-        // TODO: get question and go there
+        questions.getRandomQuestion({
+          language: this.selectedLanguage,
+          categories: this.selectedCategories,
+          difficulty: this.selectedDifficulties,
+        })
+        .then(result => {
+          if (result && result.url) {
+            state.$router.push({
+              path: result.url,
+              query: state.getParameters()
+            })
+          }
+        })
+        .catch(error => {
+          console.debug(error)
+          state.noResults = true
+        })
       }
     },
-    updateParameters() {
+    getParameters() {
       let params = {
         language: this.selectedLanguage
       }
@@ -244,19 +259,13 @@ export default {
         params.difficulty = this.selectedDifficulties.join('|')
       }
 
-      this.$router.push({
-        path: '/quiz/',
-        query: params
-      })
+      return params
     }
   }
 }
 </script>
 
 <style lang="scss">
-.content {
-  min-height: 100vh;
-}
 .question-finder {
   
   .programming-langs, .question-categories {
