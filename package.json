@@ -1,13 +1,14 @@
 {
-  "name": "sandbox",
+  "name": "BlockScoped",
   "version": "1.0.0",
-  "description": "'# Hello VuePress'",
+  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
