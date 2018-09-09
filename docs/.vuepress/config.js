@@ -1,6 +1,6 @@
 module.exports = {
   title: 'BlockScoped',
-  description: 'Randomized coding questions by topic and difficulty',
+  description: 'Random coding questions by topic and difficulty',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },

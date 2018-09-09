@@ -1,3 +1,3 @@
-## Get a Random Programming Question
+## Find an Interview Question
 
 <QuestionFinder />

@@ -3,14 +3,7 @@
 </template>
 
 <script>
-const categoryText = {
-  javascript: '⚛️ Javascript',
-  csharp: '⚛️ C#',
-  computer: '💻 Computer required',
-  nocomputer: '⛔️💻 No computer needed',
-  whiteboard: '✏️ You may want a whiteboard',
-  nowhiteboard: '⛔️✏️ No whiteboarding'
-}
+import categories from '../categories.js'
 
 export default {
   data () {
@@ -23,8 +16,8 @@ export default {
   ],
   computed: {
     text: function () {
-      if (this.name && categoryText[this.name]) {
-        return categoryText[this.name]
+      if (this.name && categories.categoryText[this.name]) {
+        return categories.categoryText[this.name]
       }
     }
   }

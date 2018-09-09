@@ -7,13 +7,7 @@
 </template>
 
 <script>
-const ratings = {
-  easy: '😅 Easy',
-  medium: '🤔 Medium',
-  hard: '😨 Hard',
-  impossible: '☠️ Impossible',
-  unknown: '😵 Not so sure about this one'
-}
+import categories from '../categories.js'
 
 export default {
   data () {
@@ -26,8 +20,8 @@ export default {
   ],
   computed: {
     text: function () {
-      if (ratings[this.rating]) {
-        return ratings[this.rating]
+      if (categories.difficultyRatingText[this.rating]) {
+        return categories.difficultyRatingText[this.rating]
       }
       return '😵 Not so sure about this one'
     }
