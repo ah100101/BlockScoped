@@ -8,6 +8,6 @@ features:
 - title: Categorized
   details: All interview questions are grouped by language and categorized by difficulty, required materials, concepts, and many others.
 - title: Open Source
-  details: BlockScoped's library of questions are OpenSourced on GitHub. Wish there were more Elm interview questions? Contribute!
+  details: BlockScoped's library of questions are open sourced on GitHub. Wish there were more Elm interview questions? Contribute!
 footer: BlockScoped | Copyright © 2018 - present | Powered by VuePress
 ---
