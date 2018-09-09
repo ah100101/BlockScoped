@@ -1,5 +1,8 @@
 <template lang='pug'>
-  span(v-html='text')
+  span(
+    v-html='text'
+    v-bind:data-key='name'
+    )
 </template>
 
 <script>
