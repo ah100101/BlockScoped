@@ -151,13 +151,27 @@ export default {
     }
 
     if (this.$route.query.difficulty) {
-      let ratingParams = this.$route.query.difficulty.split('|')
-      console.log(ratingParams)
+      let difficultyParams = this.$route.query.difficulty.split('|')
+      if (difficultyParams && difficultyParams.length > 0) {
+        let validParams = difficultyParams.filter(rating => categories.isValidDifficulty(rating))
+
+        if (validParams && validParams.length > 0) {
+          this.selectedDifficulties = validParams
+          this.categoriesExpanded = true
+        }
+      }
     }
 
-    console.log(this.$route.query.language)
-    console.log(this.$route.query.categories)
-    console.log(this.$route.query.difficulty)
+    if (this.$route.query.categories) {
+      let categoryParams = this.$route.query.categories.split('|')
+      if (categoryParams && categoryParams.length > 0) {
+        let validParams = categoryParams.filter(category => categories.isValidCategory(category))
+
+        if (validParams && validParams.length > 0) {
+          this.selectedCategories = validParams
+        }
+      }
+    }
   },
   props: [
     

@@ -67,6 +67,18 @@ const difficultyRatings = [
   }
 ]
 
+const isValidDifficulty = (key) => {
+  return difficultyRatings
+    .filter(rating => rating.key === key)
+    .length > 0
+}
+
+const isValidCategory = (key) => {
+  return categories
+    .filter(category => category.key === key)
+    .length > 0
+}
+
 const categoryText = languages
   .concat(categories)
   .reduce((acc, category) => {
@@ -85,5 +97,7 @@ export default {
   languages,
   categories,
   categoryText,
-  difficultyRatingText
+  difficultyRatingText,
+  isValidDifficulty,
+  isValidCategory
 }
