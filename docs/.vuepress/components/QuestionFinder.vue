@@ -28,47 +28,74 @@
           v-html='lang.buttonText'
           ) 
   p
-    strong Filter by question difficulty
-  .question-categories
-    .question-category-column
-      div(v-for='rating in ratings.left')
-        a(
-          class='filter-button custom'
-          v-html='rating.buttonText'
-          ) 
-    .question-category-column
-      div(v-for='rating in ratings.center')
-        a(
-          class='filter-button custom'
-          v-html='rating.buttonText'
-          ) 
-    .question-category-column
-      div(v-for='rating in ratings.right')
-        a(
-          class='filter-button custom'
-          v-html='rating.buttonText'
-          ) 
+    a(
+      class='toggle'
+      v-on:click='ratingsExpanded = !ratingsExpanded'
+      v-html='filterRatingsText'
+      )
+  transition(name='fade')
+    .question-categories(v-show='ratingsExpanded')
+      .question-category-column
+        div(v-for='rating in ratings.left')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": difficultySet(rating.key) }'
+            v-on:click='toggleDifficulty(rating.key)'
+            v-html='rating.buttonText'
+            ) 
+      .question-category-column
+        div(v-for='rating in ratings.center')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": difficultySet(rating.key) }'
+            v-on:click='toggleDifficulty(rating.key)'
+            v-html='rating.buttonText'
+            ) 
+      .question-category-column
+        div(v-for='rating in ratings.right')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": difficultySet(rating.key) }'
+            v-on:click='toggleDifficulty(rating.key)'
+            v-html='rating.buttonText'
+            ) 
   p
-    strong Filter by question categories
-  .question-categories
-    .question-category-column
-      div(v-for='category in categories.left')
-        a(
-          class='filter-button custom'
-          v-html='category.buttonText'
-          ) 
-    .question-category-column
-      div(v-for='category in categories.center')
-        a(
-          class='filter-button custom'
-          v-html='category.buttonText'
-          ) 
-    .question-category-column
-      div(v-for='category in categories.right')
-        a(
-          class='filter-button custom'
-          v-html='category.buttonText'
-          )
+    a(
+      class='toggle'
+      v-on:click='categoriesExpanded = !categoriesExpanded'
+      v-html='filterCategoriesText'
+    )
+  transition(name='fade')
+    .question-categories(v-show='categoriesExpanded')
+      .question-category-column
+        div(v-for='category in categories.left')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": categorySet(category.key) }'
+            v-on:click='toggleCategory(category.key)'
+            v-html='category.buttonText'
+            ) 
+      .question-category-column
+        div(v-for='category in categories.center')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": categorySet(category.key) }'
+            v-on:click='toggleCategory(category.key)'
+            v-html='category.buttonText'
+            ) 
+      .question-category-column
+        div(v-for='category in categories.right')
+          a(
+            class='filter-button custom'
+            v-bind:class='{ "selected": categorySet(category.key) }'
+            v-on:click='toggleCategory(category.key)'
+            v-html='category.buttonText'
+            )
+  .finished
+    a.find-button(
+      v-bind:class='{ "disabled": !selectionValid }'
+      v-on:click='findQuestion'
+      ) Get Question
   
 </template>
 
@@ -103,32 +130,119 @@ const divideArrayInto3 = (arr) => {
 export default {
   data () {
     return { 
-      selectedLanguage: '',
       languages: {},
       categories: {},
-      ratings: {}
+      ratings: {},
+      selectedLanguage: '',
+      selectedDifficulties: [],
+      selectedCategories: [],
+      ratingsExpanded: false,
+      categoriesExpanded: false
     }
   },
   mounted: function () {
     this.languages = divideArrayInto3(categories.languages)
     this.categories = divideArrayInto3(categories.categories)
     this.ratings = divideArrayInto3(categories.difficultyRatings)
+
+    if (categories.languages.filter(l => l.key === this.$route.query.language).length > 0) {
+      this.selectedLanguage = this.$route.query.language
+      this.ratingsExpanded = true
+    }
+
+    if (this.$route.query.difficulty) {
+      let ratingParams = this.$route.query.difficulty.split('|')
+      console.log(ratingParams)
+    }
+
+    console.log(this.$route.query.language)
+    console.log(this.$route.query.categories)
+    console.log(this.$route.query.difficulty)
   },
   props: [
     
   ],
   computed: {
-
+    filterRatingsText: function () {
+      let text = 'Filter by question difficulty'
+      if (this.ratingsExpanded) {
+        return text + ' ↑'
+      }
+      return text + ' ↓'
+    },
+    filterCategoriesText: function () {
+      let text = 'Filter by question categories'
+      if (this.categoriesExpanded) {
+        return text + ' ↑'
+      }
+      return text + ' ↓'
+    },
+    selectionValid: function () {
+      return !!this.selectedLanguage
+    }
   },
   methods: {
     setLanguage(lang) {
       this.selectedLanguage = lang
+      this.ratingsExpanded = true
+      this.updateParameters()
+    },
+    toggleDifficulty(rating) {
+      if (this.difficultySet(rating)) {
+        this.selectedDifficulties = this.selectedDifficulties.filter(r => r !== rating)
+      } else {
+        this.selectedDifficulties.push(rating)
+        this.categoriesExpanded = true
+      }
+
+      this.updateParameters()
+    },
+    difficultySet(rating) {
+      return this.selectedDifficulties.filter(r => r === rating).length > 0
+    },
+    toggleCategory(category) {
+      if (this.categorySet(category)) {
+        this.selectedCategories = this.selectedCategories.filter(r => r !== category)
+      } else {
+        this.selectedCategories.push(category)
+      }
+
+      this.updateParameters()
+    },
+    categorySet(category) {
+      return this.selectedCategories.filter(r => r === category).length > 0
+    },
+    findQuestion() {
+      if (this.selectionValid) {
+        // TODO: get question and go there
+      }
+    },
+    updateParameters() {
+      let params = {
+        language: this.selectedLanguage
+      }
+
+      if (this.selectedCategories && this.selectedCategories.length > 0) {
+        params.categories = this.selectedCategories.join('|')
+      }
+
+      if (this.selectedDifficulties && this.selectedDifficulties.length > 0) {
+        params.difficulty = this.selectedDifficulties.join('|')
+      }
+
+      this.$router.push({
+        path: '/quiz/',
+        query: params
+      })
     }
   }
 }
 </script>
 
 <style lang="scss">
+.content {
+  min-height: 100vh;
+}
 .question-finder {
   
   .programming-langs, .question-categories {
@@ -167,14 +281,57 @@ export default {
       text-decoration: none;
       border-bottom: 0px;
     }
-    
-    .filter-button:hover:not(.disabled), .filter-button.selected {
+
+    .filter-button:hover:not(.disabled) {
+      text-decoration: none;
+    }
+
+    .filter-button.selected {
       background-color: #62d0e3;
       box-shadow: none;
-      text-decoration: none;
       top: 0px;
       transition: all ease 0.2s;
     }
+  }
+
+  .finished {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eaecef;
+
+    a.find-button {
+      margin: 2rem;
+      display: inline-block;
+      min-width: 33%;
+      color: #fff;
+      background-color: #4eb7c9;
+      padding: 0.5rem 1.3rem;
+      border-radius: 4px;
+      box-sizing: border-box;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    a.find-button:hover {
+      background-color: #62d0e3;
+    }
+
+    a.find-button.disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+
+  a.toggle {
+    cursor: pointer;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 
   @media (max-width: 419px) {

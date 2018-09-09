@@ -1,3 +1,3 @@
-## Find an Interview Question
+## Find an Random Interview Question
 
 <QuestionFinder />
