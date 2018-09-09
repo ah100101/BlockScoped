@@ -19,5 +19,12 @@
     "url": "/javascript/#_3-explain-what-a-closure-is-in-javascript-and-provide-an-example",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "_4-what-is-the-difference-between-and",
+    "title": "4. What is the difference between == and === ?",
+    "url": "/javascript/#_4-what-is-the-difference-between-and",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]

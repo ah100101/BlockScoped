@@ -24,7 +24,7 @@ const categories = [
   },
   { 
     key: 'nocomputer',
-    text: '⛔️💻 No computer needed',
+    text: '⛔️ No computer needed',
     buttonText: 'No Computer'
   },
   { 
@@ -34,7 +34,7 @@ const categories = [
   },
   { 
     key: 'nowhiteboard',
-    text: '⛔️✏️ No whiteboarding',
+    text: '⛔️ No whiteboarding',
     buttonText: 'No Whiteboard'
   }
 ]
