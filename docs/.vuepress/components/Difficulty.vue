@@ -2,7 +2,11 @@
 .difficulty
  p
   strong Difficulty
- p(v-html='text')
+ p(
+   class='rating'
+   v-bind:data-key='rating' 
+   v-html='text'
+   )
   
 </template>
 

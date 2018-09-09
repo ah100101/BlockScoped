@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "_1-name-two-programming-paradigms-important-for-javascript-developers",
+    "title": "1. Name two programming paradigms important for JavaScript developers.",
+    "url": "/javascript/#_1-name-two-programming-paradigms-important-for-javascript-developers",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "_2-list-examples-of-falsey-javascript-values",
+    "title": "2. List examples of falsey javascript values.",
+    "url": "/javascript/#_2-list-examples-of-falsey-javascript-values",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "_3-explain-what-a-closure-is-in-javascript-and-provide-an-example",
+    "title": "3. Explain what a closure is in Javascript and provide an example.",
+    "url": "/javascript/#_3-explain-what-a-closure-is-in-javascript-and-provide-an-example",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  }
+]

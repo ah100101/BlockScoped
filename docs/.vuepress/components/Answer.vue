@@ -6,7 +6,7 @@
       v-html='toggleText'
       )
   transition(name='fade')
-    .answer-text(v-show='showAnswer')
+    .answer-text(v-if='showAnswer')
       h2(class='answer') Answer
       slot
       a(v-on:click='findMore()') Find another question
