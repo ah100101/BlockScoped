@@ -1,6 +1,6 @@
 ---
 home: true
-actionText: Get Started →
+actionText: Find a Question →
 actionLink: /quiz/
 features:
 - title: Random
