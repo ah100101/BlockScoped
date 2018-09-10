@@ -2,9 +2,9 @@
 
 <Categories>
 
-<Category name='csharp'/>
-<Category name='nocomputer'/>
-<Category name='nowhiteboard'/>
+<Category slug='csharp'/>
+<Category slug='nocomputer'/>
+<Category slug='nowhiteboard'/>
 
 </Categories>
 
