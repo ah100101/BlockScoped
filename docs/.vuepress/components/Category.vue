@@ -1,7 +1,7 @@
 <template lang='pug'>
   span(
     v-html='text'
-    v-bind:data-key='name'
+    v-bind:data-key='slug'
     )
 </template>
 
@@ -15,12 +15,12 @@ export default {
     }
   },
   props: [
-    'name'
+    'slug'
   ],
   computed: {
     text: function () {
-      if (this.name && categories.categoryText[this.name]) {
-        return categories.categoryText[this.name]
+      if (this.slug && categories.categoryText[this.slug]) {
+        return categories.categoryText[this.slug]
       }
     }
   }

@@ -2,9 +2,9 @@
 
 <Categories>
 
-<Category name='javascript'/>
-<Category name='nocomputer'/>
-<Category name='nowhiteboard'/>
+<Category slug='javascript'/>
+<Category slug='nocomputer'/>
+<Category slug='nowhiteboard'/>
 
 </Categories>
 
@@ -20,9 +20,9 @@ JavaScript is a multi-paradigm language, supporting imperative/procedural progra
 
 <Categories>
 
-<Category name='javascript'/>
-<Category name='nocomputer'/>
-<Category name='nowhiteboard'/>
+<Category slug='javascript'/>
+<Category slug='nocomputer'/>
+<Category slug='nowhiteboard'/>
 
 </Categories>
 
@@ -47,9 +47,9 @@ Reference: [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 <Categories>
 
-<Category name='javascript'/>
-<Category name='nocomputer'/>
-<Category name='nowhiteboard'/>
+<Category slug='javascript'/>
+<Category slug='nocomputer'/>
+<Category slug='nowhiteboard'/>
 
 </Categories>
 
@@ -81,9 +81,9 @@ Reference: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Clo
 
 <Categories>
 
-<Category name='javascript'/>
-<Category name='nocomputer'/>
-<Category name='nowhiteboard'/>
+<Category slug='javascript'/>
+<Category slug='nocomputer'/>
+<Category slug='nowhiteboard'/>
 
 </Categories>
 
