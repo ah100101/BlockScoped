@@ -150,7 +150,7 @@ After questions are added, they must be added to `docs/.vuepress/questionsData/[
   },
 ```
 
-Until there is a build step that builds there is workaround ~~hack~~ script that can be ran against the dom (via dev tools 😞) for generating an entire .md files json that can be copy/pasted into the associated .json file:
+Until there is an automated build step, there is workaround ~~hack~~ script that can be ran against the dom (via dev tools 😞) for generating an entire .md files json that can be copy/pasted into the associated .json file:
 
 ```javascript
 JSON.stringify(
