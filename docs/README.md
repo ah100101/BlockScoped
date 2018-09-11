@@ -1,6 +1,6 @@
 ---
 home: true
-actionText: Find a Question →
+actionText: Find a Programming Question →
 actionLink: /quiz/
 features:
 - title: Random
