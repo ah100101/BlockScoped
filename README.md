@@ -1,4 +1,4 @@
-# 📦 BlockScoped 🔫
+# {🔭} BlockScoped
 
 ## Random coding questions by topic and difficulty
 
@@ -14,21 +14,21 @@ Any questions should be added at the bottom of the .md file and needs to use the
 
   <template slot='question'>
 
-  ## 0. Question text here
+  ## Question text here
 
   </template>
 
   <template slot='categories'>
   
-    <Category slug='javascript'/>
-    <Category slug='nocomputer'/>
-    <Category slug='nowhiteboard'/>  
+  <Category slug='javascript'/>
+  <Category slug='nocomputer'/>
+  <Category slug='nowhiteboard'/>  
 
   </template>
 
   <template slot='difficulty'>
 
-    <Difficulty rating='easy' />  
+  <Difficulty rating='easy' />  
 
   </template>
 
@@ -40,7 +40,7 @@ Any questions should be added at the bottom of the .md file and needs to use the
 
   <template slot='reference'>
 
-  Reference: [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+  [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
   </template>
 
@@ -130,11 +130,12 @@ const difficulties = [
 
 Questions must satisfy the following criteria to be merged:
 
-- [ ] Question described accurately within question slot (and numbered correctly)
+- [ ] Question described accurately within question slot
 - [ ] At least one category, the language or topic, must be provided within the categories slot with the Category component
 - [ ] One and only one difficulty is provided within the difficulty slot via Difficulty component
 - [ ] Answer provided within the answer slot
 - [ ] Linkable references are provided, and are provided within the reference slot
+- [ ] Topic .json file updated within `docs/.vuepress/questionData/`
 
 #### Note about updating questions.js
 
@@ -142,9 +143,9 @@ After questions are added, they must be added to `docs/.vuepress/questionsData/[
 
 ```javascript
   {
-    "slug": "_1-name-two-programming-paradigms-important-for-javascript-developers",
-    "title": "1. Name two programming paradigms important for JavaScript developers.",
-    "url": "/javascript/#_1-name-two-programming-paradigms-important-for-javascript-developers",
+    "slug": "name-two-programming-paradigms-important-for-javascript-developers",
+    "title": "Name two programming paradigms important for JavaScript developers.",
+    "url": "/javascript/name-two-programming-paradigms-important-for-javascript-developers",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
   },
@@ -158,7 +159,7 @@ JSON.stringify(
       return {
         slug: h.id,
         title: h.outerText.replace('# ', ''),
-        url: h.baseURI.replace('http://localhost:8080', '') + '#' + h.id,
+        url: h.baseURI.replace('http://localhost:8080', ''),
         categories: Array.from(
           Array.from(document.getElementsByClassName('categories'))[
             i
@@ -170,8 +171,6 @@ JSON.stringify(
           ].querySelectorAll('.rating')
         ).map(r => r.dataset.key)[0]
       }
-    })
+    })[0]
   )
 ```
-
-(OR I'll just build it before deployment)
