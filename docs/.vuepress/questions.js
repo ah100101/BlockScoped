@@ -33,6 +33,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+const getQuestionList = topicKey => {
+  if (!topicKey || !questions[topicKey]) {
+    console.error('Invalid topicKey')
+    return
+  }
+
+  return questions[topicKey]
+}
+
 const getRandomQuestion = questionRequest => {
   if (!questionRequest || !questionRequest.language) {
     console.error('Invalid Parameters provided.')
@@ -83,5 +92,6 @@ const getRandomQuestion = questionRequest => {
 }
 
 export default {
-  getRandomQuestion
+  getRandomQuestion,
+  getQuestionList
 }
