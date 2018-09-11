@@ -4,9 +4,9 @@
 
 ### 😇 Contributing new questions (and answers)
 
-Each topic of questions has its own markdown file within the `docs` directory.
+Each topic of questions has its own markdown directory and readme (listing) within the `docs` directory. Each individual question has its own .md file within the associated topic directory.
 
-Any questions should be added at the bottom of the .md file and needs to use the following template. Markdown text can be utilized within all the named slots.
+Any new question should have a new .md file created in the topic directory and should use the following template (markdown text can be utilized within all the named slots).
 
 ```html
 
