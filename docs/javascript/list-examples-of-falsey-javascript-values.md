@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## List examples of falsey javascript values.
+  ## List examples of falsy javascript values.
 
   </template>
 
