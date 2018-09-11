@@ -8,7 +8,7 @@
       a(
         v-bind:href="question.url" 
         class="nav-link"
-        ) Go to question →
+        ) Go to full question →
     br
 </template>  
 
