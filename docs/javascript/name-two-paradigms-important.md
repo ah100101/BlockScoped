@@ -21,12 +21,14 @@
   </template>
 
   <template slot='answer'>
-
-  JavaScript is a multi-paradigm language, supporting imperative/procedural programming along with OOP (Object-Oriented Programming) and functional programming. JavaScript supports OOP with prototypal inheritance.
+  
+  JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
   </template>
 
   <template slot='reference'>
+  
+  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
   </template>
 
