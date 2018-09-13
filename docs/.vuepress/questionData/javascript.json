@@ -26,5 +26,19 @@
     "url": "/javascript/what-is-the-difference-between-equal-equal.html#what-is-the-difference-between-and",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "name-5-different-type-of-for-loops-in-javascript-how-they-are-different-and-which-one-s-may-have-the-worst-performance-when-iterating-over-an-array",
+    "title": "Name 5 different type of for loops in Javascript, how they are different, and which one(s) may have the worst performance when iterating over an array?",
+    "url": "/javascript/5-for-loops.html",
+    "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "explain-the-differences-between-var-let-and-const",
+    "title": "Explain the differences between var, let, and const",
+    "url": "/javascript/var-vs-let-vs-const.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]

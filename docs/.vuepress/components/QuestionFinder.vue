@@ -1,7 +1,7 @@
 <template lang='pug'>
 .question-finder
   p
-    strong Select a programming language
+    strong Select a programming topic
   .programming-langs
     .programming-lang-column
       div(v-for='lang in languages.left')

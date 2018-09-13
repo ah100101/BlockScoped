@@ -13,6 +13,11 @@ const languages = [
     key: 'elm',
     text: '⚛️ Elm',
     buttonText: 'Elm'
+  },
+  {
+    key: 'datastructures',
+    text: '⛓ Data Structures',
+    buttonText: 'Data Structures'
   }
 ]
 
@@ -36,6 +41,11 @@ const categories = [
     key: 'nowhiteboard',
     text: '⛔️ No whiteboarding',
     buttonText: 'No Whiteboard'
+  },
+  {
+    key: 'performance',
+    text: '🚀 Performance',
+    buttonText: 'Performance'
   }
 ]
 
