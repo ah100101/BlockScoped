@@ -1,4 +1,26 @@
-## What are some way to empty an array for all references
+<Question>
+
+  <template slot='question'>
+
+  ## What are some ways to empty an array that will also update any variables that reference it?
+
+  </template>
+
+  <template slot='categories'>
+  
+  <Category slug='javascript'/>
+  <Category slug='nocomputer'/>
+  <Category slug='nowhiteboard'/>  
+
+  </template>
+
+  <template slot='difficulty'>
+
+  <Difficulty rating='medium' />  
+
+  </template>
+
+  <template slot='answer'>
 
 **Method 1**
 ```javascript
@@ -31,3 +53,9 @@ array1.splice(0, array1.length)
 
 console.log(array2) // []
 ```
+
+  </template>
+
+  <template slot='reference'></template>
+
+</Question>

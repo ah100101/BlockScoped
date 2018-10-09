@@ -1,12 +1,42 @@
-## What is the output of the following?
+<Question>
+
+  <template slot='question'>
+
+  ## What is the output of the following?
 
 ```javascript
 var s1 = '2 + 2'
 console.log(eval(s1)) // ?
 ```
 
-> `4`
+  </template>
 
-Primitives passed to eval are treated as source code
+  <template slot='categories'>
+  
+  <Category slug='javascript'/>
+  <Category slug='nocomputer'/>
+  <Category slug='nowhiteboard'/>  
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+  </template>
+
+  <template slot='difficulty'>
+
+  <Difficulty rating='easy' />  
+
+  </template>
+
+  <template slot='answer'>
+
+  > `4`
+
+  Primitives passed to eval are treated as source code
+
+  </template>
+
+  <template slot='reference'>
+
+  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+  </template>
+
+</Question>
