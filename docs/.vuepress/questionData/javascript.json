@@ -40,5 +40,75 @@
     "url": "/javascript/var-vs-let-vs-const.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "given-an-array-of-integers-how-do-you-add-a-value-to-the-beginning-of-the-array",
+    "title": "Given an array of integers, how do you add a value to the beginning of the array?",
+    "url": "/javascript/add-value-to-start-of-array.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following",
+    "title": "What is the output of the following?",
+    "url": "/javascript/array-foreach-mutate.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "how-do-you-break-from-an-array-prototype-foreach",
+    "title": "How do you break from an Array.prototype.forEach()?",
+    "url": "/javascript/break-foreach.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-the-difference-between-x-and-x",
+    "title": "What is the difference between x++ and ++x?",
+    "url": "/javascript/difference-between-pre-post.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-some-differences-between-null-and-undefined",
+    "title": "What are some differences between null and undefined?",
+    "url": "/javascript/difference-null-undefined.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-some-ways-to-empty-an-array-that-will-also-update-any-variables-that-reference-it",
+    "title": "What are some ways to empty an array that will also update any variables that reference it?",
+    "url": "/javascript/empty-array-for-references.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following-lines",
+    "title": "What is the output of the following lines?",
+    "url": "/javascript/output-null-undefined-infinity.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-a-pitfall-of-the-following",
+    "title": "What is a pitfall of the following:",
+    "url": "/javascript/pitfall-typeof-obj.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following",
+    "title": "What is the output of the following?",
+    "url": "/javascript/value-new-string-2_2.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following",
+    "title": "What is the output of the following?",
+    "url": "/javascript/value-string-2_2.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
