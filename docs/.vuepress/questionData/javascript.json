@@ -110,5 +110,12 @@
     "url": "/javascript/value-string-2_2.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-does-dom-stand-for",
+    "title": "What does DOM stand for?",
+    "url": "/javascript/dom-stands-for.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
