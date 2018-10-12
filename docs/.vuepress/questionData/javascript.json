@@ -131,5 +131,19 @@
     "url": "/javascript/defer-attribute.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-the-async-attribute-on-a-script-tag-do",
+    "title": "What does the async attribute on a script tag do?",
+    "url": "/javascript/async-attribute.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-two-ways-to-load-an-external-script-asynchronously-on-a-web-page",
+    "title": "What are two ways to load an external script asynchronously on a web page?",
+    "url": "/javascript/async-two-ways.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
   }
 ]

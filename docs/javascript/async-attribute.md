@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## What does the `defer` attribute on a script tag do?
+  ## What does the `async` attribute on a script tag do?
 
   </template>
 
@@ -22,7 +22,7 @@
 
   <template slot='answer'>
 
-  When the `defer` attribute is included, it specifies that the file can be loaded at a later time. The script will not execute until the page has been loaded and parsed.
+  When present on a script tag, the .js file will execute asynchronously as soon as it's available.
 
   </template>
 

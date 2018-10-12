@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## What does the `defer` attribute on a script tag do?
+  ## What are two ways to load an external script asynchronously on a web page?
 
   </template>
 
@@ -16,13 +16,19 @@
 
   <template slot='difficulty'>
 
-  <Difficulty rating='easy' />  
+  <Difficulty rating='medium' />  
 
   </template>
 
   <template slot='answer'>
 
-  When the `defer` attribute is included, it specifies that the file can be loaded at a later time. The script will not execute until the page has been loaded and parsed.
+  1. Load the script with the `async` script attribute
+
+  ```html
+  <script src="async-script.js" async></script>
+  ```
+
+  2. Dynamically add the script to the DOM via `document.createElement`
 
   </template>
 
