@@ -166,5 +166,12 @@
     "url": "/javascript/what-is-scope-chain.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "hard"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following-line",
+    "title": "What is the output of the following line?",
+    "url": "/javascript/what-is-output-scope-1.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
