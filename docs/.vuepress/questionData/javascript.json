@@ -145,5 +145,19 @@
     "url": "/javascript/async-two-ways.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "why-might-you-want-to-load-js-scripts-at-the-bottom-of-the-body",
+    "title": "Why might you want to load .js scripts at the bottom of the <body>?",
+    "url": "/javascript/why-load-script-body.html",
+    "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-literal-value",
+    "title": "What is a literal value?",
+    "url": "/javascript/what-is-literal-value.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
