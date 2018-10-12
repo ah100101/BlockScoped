@@ -159,5 +159,12 @@
     "url": "/javascript/what-is-literal-value.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-scope-chain-in-javascript",
+    "title": "What is a scope chain in Javascript?",
+    "url": "/javascript/what-is-scope-chain.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "hard"
   }
 ]
