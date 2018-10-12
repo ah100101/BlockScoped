@@ -124,5 +124,12 @@
     "url": "/javascript/one-100-or-four-25.html",
     "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-the-defer-attribute-on-a-script-tag-do",
+    "title": "What does the defer attribute on a script tag do?",
+    "url": "/javascript/defer-attribute.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
   }
 ]
