@@ -117,5 +117,12 @@
     "url": "/javascript/dom-stands-for.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-will-load-faster-on-a-web-page-1-external-100-kilobyte-file-or-4-external-25-kilobyte-files",
+    "title": "What will load faster on a web page: 1 external 100 kilobyte file or 4 external 25 kilobyte files?",
+    "url": "/javascript/one-100-or-four-25.html",
+    "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
   }
 ]
