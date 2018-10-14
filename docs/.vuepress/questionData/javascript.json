@@ -110,5 +110,68 @@
     "url": "/javascript/value-string-2_2.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-does-dom-stand-for",
+    "title": "What does DOM stand for?",
+    "url": "/javascript/dom-stands-for.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-will-load-faster-on-a-web-page-1-external-100-kilobyte-file-or-4-external-25-kilobyte-files",
+    "title": "What will load faster on a web page: 1 external 100 kilobyte file or 4 external 25 kilobyte files?",
+    "url": "/javascript/one-100-or-four-25.html",
+    "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-the-defer-attribute-on-a-script-tag-do",
+    "title": "What does the defer attribute on a script tag do?",
+    "url": "/javascript/defer-attribute.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-the-async-attribute-on-a-script-tag-do",
+    "title": "What does the async attribute on a script tag do?",
+    "url": "/javascript/async-attribute.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-two-ways-to-load-an-external-script-asynchronously-on-a-web-page",
+    "title": "What are two ways to load an external script asynchronously on a web page?",
+    "url": "/javascript/async-two-ways.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "why-might-you-want-to-load-js-scripts-at-the-bottom-of-the-body",
+    "title": "Why might you want to load .js scripts at the bottom of the <body>?",
+    "url": "/javascript/why-load-script-body.html",
+    "categories": ["javascript", "performance", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-literal-value",
+    "title": "What is a literal value?",
+    "url": "/javascript/what-is-literal-value.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-scope-chain-in-javascript",
+    "title": "What is a scope chain in Javascript?",
+    "url": "/javascript/what-is-scope-chain.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following-line",
+    "title": "What is the output of the following line?",
+    "url": "/javascript/what-is-output-scope-1.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
