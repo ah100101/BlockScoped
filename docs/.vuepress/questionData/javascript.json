@@ -173,5 +173,19 @@
     "url": "/javascript/what-is-output-scope-1.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-the-output-of-the-following",
+    "title": "What is the output of the following?",
+    "url": "/javascript/what-is-output-proto.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "define-lexical-scoping",
+    "title": "Define Lexical Scoping",
+    "url": "/javascript/define-lexical-scoping.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "hard"
   }
 ]
