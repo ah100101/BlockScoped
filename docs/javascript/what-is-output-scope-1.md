@@ -7,12 +7,12 @@
   ```js
   var animal = 'dog';
 
-  function getAnimal() {
+  function f1() {
     var animal = 'cat';
     return animal;
   }
 
-  console.log(getAnimal()); // ?
+  console.log(f1()); // ?
   ```
 
   </template>
