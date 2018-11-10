@@ -2,6 +2,7 @@
 home: true
 actionText: Find a Programming Question →
 actionLink: /quiz/
+heroImage: /images/logo-stacked-cards.svg
 features:
 - title: Random
   details: Quiz your knowledge by receiving a random programming interview questions. Questions are linkable for sharing and for future reference.
