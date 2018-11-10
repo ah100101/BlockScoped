@@ -187,5 +187,8 @@
     "url": "/javascript/define-lexical-scoping.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "hard"
-  }
+  },
+  {"slug":"describe-the-use-case-for-promise-all","title":"#\nDescribe the use case for Promise.all?","url":"/javascript/promise-all-definition.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"easy"},
+  {"slug":"what-is-a-promise","title":"#\nWhat is a Promise?","url":"/javascript/what-is-promise.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"medium"},
+  {"slug":"what-are-the-properties-of-a-pure-function","title":"#\nWhat are the properties of a pure function?","url":"/javascript/define-pure-function.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"medium"}
 ]
