@@ -188,7 +188,53 @@
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "hard"
   },
-  {"slug":"describe-the-use-case-for-promise-all","title":"#\nDescribe the use case for Promise.all?","url":"/javascript/promise-all-definition.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"easy"},
-  {"slug":"what-is-a-promise","title":"#\nWhat is a Promise?","url":"/javascript/what-is-promise.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"medium"},
-  {"slug":"what-are-the-properties-of-a-pure-function","title":"#\nWhat are the properties of a pure function?","url":"/javascript/define-pure-function.html","categories":["javascript","nocomputer","nowhiteboard"],"difficulty":"medium"}
+  {
+    "slug": "describe-the-use-case-for-promise-all",
+    "title": "#\nDescribe the use case for Promise.all?",
+    "url": "/javascript/promise-all-definition.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-promise",
+    "title": "What is a Promise?",
+    "url": "/javascript/what-is-promise.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-are-the-properties-of-a-pure-function",
+    "title": "What are the properties of a pure function?",
+    "url": "/javascript/define-pure-function.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-the-difference-between-a-function-declaration-and-a-function-expression",
+    "title": "What is the difference between a function declaration and a function expression?",
+    "url": "/javascript/function-declaration-vs-function-expression.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-javascript-primitive",
+    "title": "What is a Javascript primitive?",
+    "url": "/javascript/what-is-a-primitive.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-the-difference-between-object-create-and-object-assign",
+    "title": "What is the difference between Object.create and Object.assign?",
+    "url": "/javascript/object-assign-vs-object-create.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "name-the-six-javascript-primitive-types",
+    "title": "Name the six Javascript primitive types",
+    "url": "/javascript/six-primitive-types.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "medium"
+  }
 ]
