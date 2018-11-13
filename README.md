@@ -1,4 +1,4 @@
-# {🔭} BlockScoped
+# {?} BlockScoped
 
 ## Random coding questions by topic and difficulty
 
