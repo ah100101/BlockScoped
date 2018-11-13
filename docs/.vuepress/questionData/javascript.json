@@ -236,5 +236,12 @@
     "url": "/javascript/six-primitive-types.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "function-vs-method",
+    "title": "What is the difference between a function and a method",
+    "url": "/javascript/function-vs-method.html",
+    "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    "difficulty": "easy"
   }
 ]
