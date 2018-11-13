@@ -246,14 +246,14 @@
   },
   {
     "slug": "what-is-a-setter-provide-an-example",
-    "title": "#\nWhat is a setter? Provide an example.",
+    "title": "What is a setter? Provide an example.",
     "url": "/javascript/what-is-a-setter.html",
     "categories": ["javascript"],
     "difficulty": "medium"
   },
   {
     "slug": "what-is-a-getter-provide-an-example",
-    "title": "#\nWhat is a getter? Provide an example.",
+    "title": "What is a getter? Provide an example.",
     "url": "/javascript/what-is-a-getter.html",
     "categories": ["javascript"],
     "difficulty": "medium"
