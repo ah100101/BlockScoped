@@ -34,7 +34,7 @@ For example, Jane Doe may have two contributor pages on a site. One page has her
 ```html
 
 <head>
-  <link rel="canonical" href="http://blockscoped.io/contributers/jane-smith" />
+  <link rel="canonical" href="http://blockscoped.io/contributors/jane-smith" />
 </head>
 
 ```
