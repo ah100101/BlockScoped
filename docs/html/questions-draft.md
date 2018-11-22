@@ -93,5 +93,33 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
 
 > "still have button text provided". This should be done to keep the button accessible since only having an icon makes the button difficult for screen readers to parse. Providing button text keeps the button accessible and the text can be hidden through other means.
 
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Icon_buttons
 
+## True or False. A `<canvas>` element is just as accessible as other html elements.
+
+> False. Canvas elements do not expose content as thoroughly as HTML.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#Accessibility_concerns
+
+## What is a `<dl>` element and what is an example use?
+
+> `<dl>` stands for Description List which is useful for displaying key value pairs, like a dictionary.
+
+Example:
+
+```html
+
+<h2>Star Wars Characters</h2>
+
+<dl>
+  <dt>Luke Skywalker</dt>
+  <dd>Luke is the twin brother of Rebellion leader Princess Leia Organa of Alderaan, a friend and brother-in-law of smuggler Han Solo, an apprentice to Jedi Masters Obi-Wan "Ben" Kenobi and Yoda, the son of fallen Jedi Anakin Skywalker (Darth Vader) and Queen of Naboo/Republic Senator Padmé Amidala and maternal uncle of Ben Solo / Kylo Ren.</dd>
+
+  <dt>Han Solo</dt>
+  <dd>Han is the captain of the Millennium Falcon, along with his Wookiee co-pilot Chewbacca, whereby both pilots became involved in the Rebel Alliance's struggle against the Galactic Empire.</dd>
+
+  <dt>Rey</dt>
+  <dd>Rey is a scavenger who was left behind on the planet Jakku when she was a child, and later becomes involved with the Resistance's conflict with the First Order when her solitary life is interrupted by BB-8, the droid of ace Resistance pilot Poe Dameron, and a runaway Stormtrooper named Finn.</dd>
+</dl>
+
+```
