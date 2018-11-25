@@ -1,40 +1,32 @@
-## True or False. You can set `margin` on a `<br />` tag.
-
-> True, but this may be considered bad practice since line-height is more appropriate for this purpose.
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br#Styling_with_CSS
-
 <Question>
 
   <template slot='question'>
 
-  ## 
+  ## True or False. You can set `margin` on a `<br />` tag.
 
   </template>
 
   <template slot='categories'>
   
-  <Category slug='javascript'/>
-  <Category slug='nocomputer'/>
-  <Category slug='nowhiteboard'/>  
+  <Category slug='html'/>
 
   </template>
 
   <template slot='difficulty'>
 
-  <Difficulty rating='medium' />  
+  <Difficulty rating='easy' />  
 
   </template>
 
   <template slot='answer'>
 
-
+  True, but this may be considered bad practice since line-height is more appropriate for this purpose.
 
   </template>
 
   <template slot='reference'>
 
-  [Mozilla](url)
+  [Mozilla Developer Network: br element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br#Styling_with_CSS)
 
   </template>
 

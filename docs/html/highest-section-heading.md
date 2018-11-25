@@ -1,22 +1,14 @@
-## What is the highest section heading?
-
-> `<h6>`
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
-
 <Question>
 
   <template slot='question'>
 
-  ## 
+  ## What is the highest section heading?
 
   </template>
 
   <template slot='categories'>
   
-  <Category slug='javascript'/>
-  <Category slug='nocomputer'/>
-  <Category slug='nowhiteboard'/>  
+  <Category slug='html'/>
 
   </template>
 
@@ -28,13 +20,13 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
   <template slot='answer'>
 
-
+  `<h6>`
 
   </template>
 
   <template slot='reference'>
 
-  [Mozilla](url)
+  [Mozilla Developer Network: Heading Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
   </template>
 
