@@ -1,4 +1,3 @@
-
 <Question>
 
   <template slot='question'>
@@ -9,9 +8,7 @@
 
   <template slot='categories'>
   
-  <Category slug='javascript'/>
-  <Category slug='nocomputer'/>
-  <Category slug='nowhiteboard'/>  
+  <Category slug='html'/>
 
   </template>
 
@@ -29,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Icon_buttons)
+  [Mozilla Developer Network: Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Icon_buttons)
 
   </template>
 

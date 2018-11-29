@@ -5,20 +5,25 @@ const languages = [
     buttonText: 'Javascript'
   },
   {
-    key: 'csharp',
-    text: '⚛️ C#',
-    buttonText: 'C#'
-  },
-  {
-    key: 'elm',
-    text: '⚛️ Elm',
-    buttonText: 'Elm'
-  },
-  {
-    key: 'datastructures',
-    text: '⛓ Data Structures',
-    buttonText: 'Data Structures'
+    key: 'html',
+    text: '🔨 Html',
+    buttonText: 'HTML'
   }
+  // {
+  //   key: 'csharp',
+  //   text: '⚛️ C#',
+  //   buttonText: 'C#'
+  // },
+  // {
+  //   key: 'elm',
+  //   text: '⚛️ Elm',
+  //   buttonText: 'Elm'
+  // },
+  // {
+  //   key: 'datastructures',
+  //   text: '⛓ Data Structures',
+  //   buttonText: 'Data Structures'
+  // }
 ]
 
 const categories = [

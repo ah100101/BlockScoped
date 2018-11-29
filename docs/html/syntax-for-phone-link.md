@@ -1,4 +1,3 @@
-
 <Question>
 
   <template slot='question'>

@@ -8,9 +8,7 @@
 
   <template slot='categories'>
   
-  <Category slug='javascript'/>
-  <Category slug='nocomputer'/>
-  <Category slug='nowhiteboard'/>  
+  <Category slug='html'/>  
 
   </template>
 
@@ -30,7 +28,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
+  [Mozilla Developer Network: Option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
 
   </template>
 

@@ -1,9 +1,8 @@
-
 <Question>
 
   <template slot='question'>
 
-  ## What is the default `xmlns` value on `<html>` elements?
+  ## What is the default `xmlns` value on `<html>`?
 
   </template>
 
@@ -27,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: html](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html )
+  [Mozilla Developer Network: html](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)
 
   </template>
 

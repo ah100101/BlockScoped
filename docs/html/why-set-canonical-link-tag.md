@@ -1,4 +1,3 @@
-
 <Question>
 
   <template slot='question'>
@@ -21,9 +20,9 @@
 
   <template slot='answer'>
 
-  Setting a link tag with the `rel` attribute set to `canonical` specifies that the tags `href` value is the preferred document for search engines to help prevent duplicate content issues.
+  Setting a link tag with the `rel` attribute set to `canonical` specifies that the tag's `href` value is the preferred document for search engines to help prevent duplicate content issues.
 
-  For example, Jane Doe may have two contributor pages on a site. One page has her maiden name and another has her married name, Jane Smith. If on `http://blockscoped.com/contributors/jane-doe` it may make sense to add the following link to the `head`.
+  For example, Jane Doe may have two contributor pages on a site. One page has her maiden name and another has her married name, Jane Smith. On `http://blockscoped.io/contributors/jane-doe` it may make sense to add the following link to the `<head>`.
 
   ```html
 

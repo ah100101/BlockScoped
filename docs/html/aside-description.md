@@ -26,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla: aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
+  [Mozilla Developer Network: aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
 
   </template>
 

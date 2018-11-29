@@ -26,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: Block level elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+  [Mozilla Developer Network: Block Level Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 
   </template>
 

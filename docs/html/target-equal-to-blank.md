@@ -8,7 +8,7 @@
 
   ```html
 
-  <a href="https://blockscoped.io" ></a>
+  <a href="https://blockscoped.io" target="_blank"></a>
 
   ```
 
@@ -34,7 +34,7 @@
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+  [Mozilla Developer Network: Anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 
   </template>
 

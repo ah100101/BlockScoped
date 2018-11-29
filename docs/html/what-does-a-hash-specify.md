@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## Why might does a `#` specify when set on an `anchor` tag's `href` attribute
+  ## What does a `#` specify when set on an `anchor` tag's `href` attribute?
 
   </template>
 
@@ -20,13 +20,13 @@
 
   <template slot='answer'>
 
-  It specifies an internal target within the current document
+  It specifies an internal target within the current document.
 
   </template>
 
   <template slot='reference'>
 
-  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+  [Mozilla Developer Network: Anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 
   </template>
 

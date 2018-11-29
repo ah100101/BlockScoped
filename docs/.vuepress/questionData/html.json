@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "what-is-the-aside-tag-used-for",
+    "title": "What is the aside tag used for?",
+    "url": "/html/aside-description.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "why-would-you-set-the-rel-attribute-to-canonical-on-a-link-tag",
+    "title": "Why would you set the rel attribute to canonical on a <link> tag?",
+    "url": "/html/why-set-canonical-link-tag.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  }
+]

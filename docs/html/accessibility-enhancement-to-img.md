@@ -20,7 +20,7 @@
 
   <template slot='answer'>
 
-  The alt tag should be provided a concise description of the image, not a single word file name of the image.
+  The `alt` tag should be set to a concise description of the image, not a single word file name of the image.
   
   For example:
 

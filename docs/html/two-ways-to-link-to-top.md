@@ -1,9 +1,8 @@
-
 <Question>
 
   <template slot='question'>
 
-  ## What are two ways of linking an `anchor` tag to the top of the current document 
+  ## What are two ways of linking an `anchor` tag to the top of the current document? 
 
   </template>
 
@@ -28,7 +27,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+  [Mozilla Developer Network: Anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 
   </template>
 

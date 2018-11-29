@@ -1,4 +1,3 @@
-
 <Question>
 
   <template slot='question'>
@@ -27,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#Accessibility_concerns)
+  [Mozilla Developer Network: Canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#Accessibility_concerns)
 
   </template>
 

@@ -24,11 +24,13 @@ const createJson = () => {
 import javascript from './questionData/javascript.json'
 import csharp from './questionData/csharp.json'
 import datastructures from './questionData/datastructures.json'
+import html from './questionData/html.json'
 
 const questions = {
   javascript,
   csharp,
-  datastructures
+  datastructures,
+  html
 }
 
 function getRandomInt(min, max) {
