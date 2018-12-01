@@ -12,5 +12,19 @@
     "url": "/html/why-set-canonical-link-tag.html",
     "categories": ["html"],
     "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-a-sectioning-root-provide-an-example",
+    "title": "What is a Sectioning Root? Provide an example.",
+    "url": "/html/what-is-sectioning-root.html",
+    "categories": ["html"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "what-is-a-dl-element-provide-an-example",
+    "title": "What is a <dl> element? Provide an example?",
+    "url": "/html/what-is-dl-element.html",
+    "categories": ["html"],
+    "difficulty": "medium"
   }
 ]
