@@ -3,7 +3,7 @@
 
   <template slot='question'>
 
-  ## What other protols work on an `anchor` tag's `href` attribute?
+  ## What other protocols work on an `anchor` tag's `href` attribute?
 
   </template>
 

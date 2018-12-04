@@ -26,7 +26,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network: fieldset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
+  [Mozilla Developer Network: Fieldset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
 
   </template>
 

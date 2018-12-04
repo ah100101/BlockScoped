@@ -8,7 +8,7 @@
   },
   {
     "slug": "why-would-you-set-the-rel-attribute-to-canonical-on-a-link-tag",
-    "title": "Why would you set the rel attribute to canonical on a <link> tag?",
+    "title": "Why would you set the rel attribute to canonical on a link tag?",
     "url": "/html/why-set-canonical-link-tag.html",
     "categories": ["html"],
     "difficulty": "easy"
@@ -22,9 +22,163 @@
   },
   {
     "slug": "what-is-a-dl-element-provide-an-example",
-    "title": "What is a <dl> element? Provide an example?",
+    "title": "What is a element? Provide an example.",
     "url": "/html/what-is-dl-element.html",
     "categories": ["html"],
     "difficulty": "medium"
+  },
+  {
+    "slug": "what-will-setting-disabled-to-true-on-a-fieldset-element-do",
+    "title": "What will setting disabled to true on a fieldset element do?",
+    "url": "/html/what-will-disabled-on-fieldset-do.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-elements-can-be-used-to-embed-content",
+    "title": "What elements can be used to embed content?",
+    "url": "/html/what-elements-embed-content.html",
+    "categories": ["html"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "what-input-elements-can-t-use-the-required-attribute",
+    "title": "What input elements can't use the required attribute?",
+    "url": "/html/what-elements-cant-use-required.html",
+    "categories": ["html"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "what-does-setting-the-tabindexattribute-to-1-on-an-input-element-do",
+    "title": "What does setting the tabindexattribute to -1 on an input element do?",
+    "url": "/html/what-does-setting-tabindex-negative-one-do.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-the-noscript-element-do",
+    "title": "What does the noscript element do?",
+    "url": "/html/what-does-no-script-do.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-does-a-specify-when-set-on-an-anchor-tag-s-href-attribute",
+    "title": "What does a # specify when set on an anchor tag's href attribute?",
+    "url": "/html/what-does-a-hash-specify.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-block-level-elements",
+    "title": "What are Block Level elements?",
+    "url": "/html/what-are-block-level-elements.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-are-two-ways-of-linking-an-anchor-tag-to-the-top-of-the-current-document",
+    "title": "What are two ways of linking an anchor tag to the top of the current document?",
+    "url": "/html/two-ways-to-link-to-top.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-does-setting-target-blank-on-an-anchor-tag-do-when-it-is-clicked",
+    "title": "What does setting target=_blank on an anchor tag do when it is clicked?",
+    "url": "/html/target-equal-to-blank.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "on-an-anchor-tag-what-are-some-reasons-for-setting-the-rel-attribute-to-alternate",
+    "title": "On an anchor tag, what are some reasons for setting the rel attribute to alternate?",
+    "url": "/html/reason-rel-to-alternate.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-s-a-problem-that-may-come-from-skipping-a-heading-in-your-content",
+    "title": "What's a problem that may come from skipping a heading in your content?",
+    "url": "/html/problems-from-skipping-heading.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-other-protocols-work-on-an-anchor-tag-s-href-attribute",
+    "title": "What other protocols work on an anchor tag's href attribute?",
+    "url": "/html/other-href-protocols.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "true-or-false-you-can-set-margin-on-a-br-tag",
+    "title": "True or False. You can set margin on a br tag.",
+    "url": "/html/margin-on-br-tag.html",
+    "categories": ["html"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-is-the-highest-section-heading",
+    "title": "What is the highest section heading?",
+    "url": "/html/highest-section-heading.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-should-the-form-attribute-on-a-button-be-set-to",
+    "title": "What should the form attribute on a button be set to?",
+    "url": "/html/form-attribute-on-button.html",
+    "categories": ["easy"],
+    "difficulty": "easy"
+  },
+  {
+    "slug": "what-are-the-elements-allowed-within-the-head-element",
+    "title": "What are the elements allowed within the head element?",
+    "url": "/html/elements-allowed-within-head.html",
+    "categories": ["html"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "true-or-false-each-instance-of-an-iframe-on-a-page-has-its-own-session-history",
+    "title": "True or False. Each instance of an iframe on a page has its own session history.",
+    "url": "/html/does-iframe-have-its-own-history.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-the-default-xmlns-value-on-html",
+    "title": "What is the default xmlns value on html?",
+    "url": "/html/default-xmlns-value.html",
+    "categories": ["html"],
+    "difficulty": "hard"
+  },
+  {
+    "slug": "true-or-false-a-canvas-element-is-just-as-accessible-as-other-html-elements",
+    "title": "True or False. A canvas element is just as accessible as other HTML elements.",
+    "url": "/html/canvas-accessibility.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "a-button-that-displays-an-icon-instead-of-text-should-also",
+    "title": "A button that displays an icon instead of text should also...?",
+    "url": "/html/button-with-icon.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "why-shouldn-t-you-use-br-tags-for-creating-paragraphs",
+    "title": "Why shouldn't you use br tags for creating paragraphs?",
+    "url": "/html/brs-for-paragraph-tags.html",
+    "categories": ["html"],
+    "difficulty": "medium"
+  },
+  {
+    "slug": "what-is-an-accessibility-enhancement-for-an-img-element",
+    "title": "What is an accessibility enhancement for an img element?",
+    "url": "/html/accessibility-enhancement-to-img.html",
+    "categories": ["html"],
+    "difficulty": "easy"
   }
 ]

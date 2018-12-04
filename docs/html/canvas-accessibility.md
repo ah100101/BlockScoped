@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## True or False. A `<canvas>` element is just as accessible as other html elements.
+  ## True or False. A `<canvas>` element is just as accessible as other HTML elements.
 
   </template>
 
