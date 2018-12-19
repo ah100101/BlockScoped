@@ -49,3 +49,72 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 ```
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+
+## What does the `::placeholder` keyword refer to?
+
+`::placeholder` is a *pseudoelement* for the placeholder text of a form.
+
+```html
+
+<input placeholder="Username">
+
+```
+
+```css
+
+input::placeholder {
+  color: blue;
+}
+
+```
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+
+## How might you target an anchor element that is being pressed by a user?
+
+The `:active` pseudo-class can target an element that is being *activated* or pressed by a user.
+
+```css
+a:active {
+  color: blue;
+}
+```
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+
+## Which link pseudo-classes can override `:active` when the specificity is the same?
+
+`:link`
+`:hover`
+`:visited`
+
+## What does the `:first` pseudo-class do?
+
+Selects the first page of a printed document.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:first
+
+## Given the HTML below, how might you target only the paragraph with 'Luke Skywalker'?
+
+```html
+
+<div>
+  <p>Luke Skywalker</p>
+  <p>Darth Vadar</p>
+</div>
+<div>
+  <div>Yoda</div>
+  <p>Obi-wan</p>
+</div>
+
+```
+
+```css
+
+p:first-child {
+  color: blue;
+}
+
+```
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child
