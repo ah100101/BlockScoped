@@ -118,3 +118,71 @@ p:first-child {
 ```
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child
+
+## True or False. `display: none;` does not hide the element from accessiblity readers.
+
+False. `display: none;` will completely remove the element from the accessibility tree.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+## What are all the *absolute-size* keywords?
+
+`xx-small`
+`x-small`
+`small`
+`medium`
+`large`
+`x-large`
+`xx-large`
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+## What are the *relative-size* keywords
+
+`larger`
+`smaller`
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+## True or False. Using `px` is accessible because users are able to change the font size from the browser.
+
+False. Users are unable to change the font-size for font sizes in `px`.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Pixels
+
+## What is the default size, in `px`, for `1em`?
+
+16px
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Ems
+
+## How is the size of an `em` calculated?
+
+`em` = desired element pixel value / parent element font-size in pixels
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Ems
+
+## How is an `rem` calculated differently from an `em`?
+
+`rem` is calculated from the font-size of the root HTML element, not the parent element.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Rems
+
+## What is the default numeric font-weight value for `normal`?
+
+400
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+
+## What is the default numeric font-weight value for `bold`?
+
+700
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+
+## What is *margin collapsing* and provide an example.
+
+Margin collapsing is when a top and bottom margin are combined into a single margin that is the largest of the two.  This can happen with two adjacent siblings with top and bottom margins.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+
