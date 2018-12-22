@@ -14,7 +14,8 @@ module.exports = {
         text: 'Sections',
         items: [
           { text: 'Javascript', link: '/javascript/' },
-          { text: 'HTML', link: '/html/' }
+          { text: 'HTML', link: '/html/' },
+          { text: 'CSS', link: '/css/'}
         ]
       }
     ],
