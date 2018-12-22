@@ -143,15 +143,20 @@ After questions are added, they must be added to `docs/.vuepress/questionsData/[
 
 ```javascript
   {
-    "slug": "name-two-programming-paradigms-important-for-javascript-developers",
-    "title": "Name two programming paradigms important for JavaScript developers.",
+    // the formatted URL friendly name of the question
+    "slug": "name-two-programming-paradigms-important-for-javascript-developers", 
+    // the title displayed on the question
+    "title": "Name two programming paradigms important for JavaScript developers.", 
+    // the full url to the question
     "url": "/javascript/name-two-programming-paradigms-important-for-javascript-developers",
+    // the categories associated with the question
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
+    // the difficulty of the question
     "difficulty": "easy"
   },
 ```
 
-Until there is an automated build step, there is workaround ~~hack~~ script that can be ran against the dom (via dev tools 😞) for generating an entire .md files json that can be copy/pasted into the associated .json file:
+Or if you want to pop open dev tools, you can run this script on the page to generate this json (not the prettiest, but it works):
 
 ```javascript
 JSON.stringify(
