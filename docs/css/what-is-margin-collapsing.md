@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## What is *margin collapsing* and provide an example.
+  ## What is *margin collapsing*? Provide an example.
 
   </template>
 

@@ -47,7 +47,7 @@
 
   <template slot='reference'>
 
-  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
+  [Mozilla Developer Network: First Child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
 
   </template>
 

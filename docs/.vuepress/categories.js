@@ -6,24 +6,14 @@ const languages = [
   },
   {
     key: 'html',
-    text: '🔨 Html',
+    text: '🔨 HTML',
     buttonText: 'HTML'
+  },
+  {
+    key: 'css',
+    text: '📃 CSS',
+    buttonText: 'CSS'
   }
-  // {
-  //   key: 'csharp',
-  //   text: '⚛️ C#',
-  //   buttonText: 'C#'
-  // },
-  // {
-  //   key: 'elm',
-  //   text: '⚛️ Elm',
-  //   buttonText: 'Elm'
-  // },
-  // {
-  //   key: 'datastructures',
-  //   text: '⛓ Data Structures',
-  //   buttonText: 'Data Structures'
-  // }
 ]
 
 const categories = [
