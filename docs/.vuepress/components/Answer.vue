@@ -31,8 +31,8 @@ export default {
     findMore() {
       let params = {}
 
-      if (this.$route.query.language) {
-        params.language = this.$route.query.language
+      if (this.$route.query.topics) {
+        params.topics = this.$route.query.topics
       }
 
       if (this.$route.query.difficulty) {

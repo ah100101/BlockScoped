@@ -1,4 +1,4 @@
-const languages = [
+const topics = [
   {
     key: 'javascript',
     text: '⚛️ Javascript',
@@ -84,7 +84,7 @@ const isValidCategory = (key) => {
     .length > 0
 }
 
-const categoryText = languages
+const categoryText = topics
   .concat(categories)
   .reduce((acc, category) => {
     acc[category.key] = category.text
@@ -99,7 +99,7 @@ const difficultyRatingText = difficultyRatings
 
 export default {
   difficultyRatings,
-  languages,
+  topics,
   categories,
   categoryText,
   difficultyRatingText,

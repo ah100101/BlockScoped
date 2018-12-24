@@ -49,23 +49,24 @@ const getQuestionList = topicKey => {
 }
 
 const getRandomQuestion = questionRequest => {
-  if (!questionRequest || !questionRequest.language) {
+  if (!questionRequest || !questionRequest.topics || questionRequest.topics.length <= 0) {
     console.error('Invalid Parameters provided.')
   }
   return new Promise((resolve, reject) => {
-    if (!questions[questionRequest.language]) {
+    let validTopics = questionRequest.topics.filter(t => !!questions[t])
+
+    if (!validTopics && validTopics.length <= 0) {
       reject('Invalid language provided for question')
     }
 
-    let filteredQuestions = JSON.parse(
-      JSON.stringify(questions[questionRequest.language])
-    )
+    let filteredQuestions = validTopics.reduce((acc, topic) => {
+      return acc.concat(JSON.parse(JSON.stringify(questions[topic])))
+    }, [])
 
     if (questionRequest.difficulty && questionRequest.difficulty.length > 0) {
       filteredQuestions = filteredQuestions.filter(
         q1 =>
-          questionRequest.difficulty.filter(q2 => q2 === q1.difficulty).length >
-          0
+          questionRequest.difficulty.filter(q2 => q2 === q1.difficulty).length > 0
       )
     }
 
