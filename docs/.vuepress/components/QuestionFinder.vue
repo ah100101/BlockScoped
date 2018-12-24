@@ -4,27 +4,27 @@
     strong Select a programming topic
   .programming-langs
     .programming-lang-column
-      div(v-for='lang in languages.left')
+      div(v-for='lang in topics.left')
         a(
           class='filter-button custom'
-          v-bind:class='{ "selected": selectedLanguage === lang.key }'
-          v-on:click='setLanguage(lang.key)'
+          v-bind:class='{ "selected": isTopicSelected(lang.key) }'
+          v-on:click='toggleTopic(lang.key)'
           v-html='lang.buttonText'
           ) 
     .programming-lang-column
-      div(v-for='lang in languages.center')
+      div(v-for='lang in topics.center')
         a(
           class='filter-button custom'
-          v-bind:class='{ "selected": selectedLanguage === lang.key }'
-          v-on:click='setLanguage(lang.key)'
+          v-bind:class='{ "selected": isTopicSelected(lang.key) }'
+          v-on:click='toggleTopic(lang.key)'
           v-html='lang.buttonText'
           ) 
     .programming-lang-column
-      div(v-for='lang in languages.right')
+      div(v-for='lang in topics.right')
         a(
           class='filter-button custom'
-          v-bind:class='{ "selected": selectedLanguage === lang.key }'
-          v-on:click='setLanguage(lang.key)'
+          v-bind:class='{ "selected": isTopicSelected(lang.key) }'
+          v-on:click='toggleTopic(lang.key)'
           v-html='lang.buttonText'
           ) 
   p
@@ -135,10 +135,10 @@ const divideArrayInto3 = (arr) => {
 export default {
   data () {
     return { 
-      languages: {},
+      topics: {},
       categories: {},
       ratings: {},
-      selectedLanguage: '',
+      selectedTopics: [],
       selectedDifficulties: [],
       selectedCategories: [],
       ratingsExpanded: false,
@@ -147,13 +147,14 @@ export default {
     }
   },
   mounted: function () {
-    this.languages = divideArrayInto3(categories.languages)
+    this.topics = divideArrayInto3(categories.topics)
     this.categories = divideArrayInto3(categories.categories)
     this.ratings = divideArrayInto3(categories.difficultyRatings)
 
-    if (categories.languages.filter(l => l.key === this.$route.query.language).length > 0) {
-      this.selectedLanguage = this.$route.query.language
-      this.ratingsExpanded = true
+    if (!!this.$route.query.topics && this.$route.query.topics.length > 0 
+      && categories.topics.filter(l => this.$route.query.topics.filter(t => t === l.key).length > 0).length > 0) {
+        this.selectedTopics = this.$route.query.topics
+        this.ratingsExpanded = true
     }
 
     if (this.$route.query.difficulty) {
@@ -195,13 +196,28 @@ export default {
       return text + ' ↓'
     },
     selectionValid: function () {
-      return !!this.selectedLanguage
+      return !!this.selectedTopics && this.selectedTopics.length > 0
     }
   },
   methods: {
-    setLanguage(lang) {
-      this.selectedLanguage = lang
-      this.ratingsExpanded = true
+    selectTopic(lang) {
+      if (this.selectedTopics.filter(t => t === lang) <= 0) {
+        this.selectedTopics.push(lang)
+        this.ratingsExpanded = true
+      }
+    },
+    deselectTopic(lang) {
+      this.selectedTopics = this.selectedTopics.filter(t => t !== lang)
+    },
+    toggleTopic(lang) {
+      if (this.isTopicSelected(lang)) {
+        this.deselectTopic(lang)
+      } else {
+        this.selectTopic(lang)
+      }
+    },
+    isTopicSelected(lang) {
+      return this.selectedTopics.filter(t => t === lang).length > 0
     },
     toggleDifficulty(rating) {
       if (this.difficultySet(rating)) {
@@ -226,9 +242,9 @@ export default {
     },
     findQuestion() {
       let state = this
-      if (this.selectionValid) {
+      if (this.selectedTopics.length > 0) {
         questions.getRandomQuestion({
-          language: this.selectedLanguage,
+          topics: this.selectedTopics,
           categories: this.selectedCategories,
           difficulty: this.selectedDifficulties,
         })
@@ -248,7 +264,7 @@ export default {
     },
     getParameters() {
       let params = {
-        language: this.selectedLanguage
+        topics: this.selectedTopics
       }
 
       if (this.selectedCategories && this.selectedCategories.length > 0) {
