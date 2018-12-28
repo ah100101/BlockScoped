@@ -203,6 +203,9 @@ export default {
     selectTopic(lang) {
       if (this.selectedTopics.filter(t => t === lang) <= 0) {
         this.selectedTopics.push(lang)
+
+        // todo: get valid difficulties based on the selected topics
+
         this.ratingsExpanded = true
       }
     },

@@ -98,7 +98,18 @@ const getRandomQuestion = questionRequest => {
   })
 }
 
+const getTopicDifficulties = topic => {
+  return new Promise((resolve, reject) => {
+    if (!questions[topic]) {
+      reject('Invalid topic provided')
+    }
+    let topicDifficulties = questions[topic].map(q => q.difficulty)
+    resolve(topicDifficulties.filter((value, index) => topicDifficulties.indexOf(value) === index))
+  })
+}
+
 export default {
   getRandomQuestion,
-  getQuestionList
+  getQuestionList,
+  getTopicDifficulties
 }
