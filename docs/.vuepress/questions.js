@@ -108,6 +108,10 @@ const getTopicDifficulties = topic => {
   })
 }
 
+const getTopicsDifficulties = topics => {
+  // todo promise.all across all topics and return a deduped array of valid categories
+}
+
 export default {
   getRandomQuestion,
   getQuestionList,
