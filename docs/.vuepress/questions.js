@@ -39,6 +39,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+function dedupe(array) {
+  return array.filter((value, index) => array.indexOf(value) === index)
+}
+
 const getQuestionList = topicKey => {
   if (!topicKey || !questions[topicKey]) {
     console.error('Invalid topicKey')
@@ -98,7 +102,69 @@ const getRandomQuestion = questionRequest => {
   })
 }
 
+const getTopicDifficulties = topic => {
+  return new Promise((resolve, reject) => {
+    if (!questions[topic]) {
+      reject('Invalid topic provided')
+    }
+    let topicDifficulties = questions[topic].map(q => q.difficulty)
+    resolve(dedupe(topicDifficulties))
+  })
+}
+
+const getTopicCategories = topic => {
+  return new Promise((resolve, reject) => {
+    if (!questions[topic]) {
+      reject('Invalid topic provided')
+    }
+
+    let topicCategories = questions[topic]
+      .map(q => q.categories)
+      .reduce((acc, categories) => {
+        let notInAcc = categories.filter(c => acc.filter(a => a === c).length === 0)
+        if (notInAcc.length > 0) {
+          acc = acc.concat(notInAcc)
+        }
+        return acc
+      }, [])
+    resolve(dedupe(topicCategories))
+  })
+}
+
+const getTopicsDifficulties = topics => {
+  let validTopics = topics.filter(topic => !!questions[topic])
+  return Promise.all(validTopics.map(topic => getTopicDifficulties(topic)))
+    .then(difficulties => {
+      let allDifficulties = difficulties.reduce((acc, difficulties) => { 
+        acc = acc.concat(difficulties)
+        return acc
+      }, [])
+      return dedupe(allDifficulties)
+    })
+    .catch(error => {
+      console.debug(error)
+      return []
+    })
+}
+
+const getTopicsCategories = topics => {
+  return Promise.all(topics.map(topic => getTopicCategories(topic)))
+    .then(topicCategories => {
+      let combinedCategories = topicCategories.reduce((acc, categories) => {
+        acc = acc.concat(categories)
+        return acc
+      }, [])
+      return dedupe(combinedCategories)
+    })
+    .catch(error => {
+      console.debug(error)
+      return []
+    })
+}
+
 export default {
   getRandomQuestion,
-  getQuestionList
+  getQuestionList,
+  getTopicsDifficulties,
+  getTopicsCategories
 }

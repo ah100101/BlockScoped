@@ -136,8 +136,8 @@ export default {
   data () {
     return { 
       topics: {},
-      categories: {},
-      ratings: {},
+      difficulties: categories.difficultyRatings,
+      allCategories: categories.categories,
       selectedTopics: [],
       selectedDifficulties: [],
       selectedCategories: [],
@@ -148,8 +148,6 @@ export default {
   },
   mounted: function () {
     this.topics = divideArrayInto3(categories.topics)
-    this.categories = divideArrayInto3(categories.categories)
-    this.ratings = divideArrayInto3(categories.difficultyRatings)
 
     if (!!this.$route.query.topics && this.$route.query.topics.length > 0 
       && categories.topics.filter(l => this.$route.query.topics.filter(t => t === l.key).length > 0).length > 0) {
@@ -181,6 +179,12 @@ export default {
     }
   },
   computed: {
+    categories: function () {
+      return divideArrayInto3(this.allCategories)
+    },
+    ratings: function () {
+      return divideArrayInto3(this.difficulties)
+    },
     filterRatingsText: function () {
       let text = 'Filter by question difficulty'
       if (this.ratingsExpanded) {
@@ -200,14 +204,36 @@ export default {
     }
   },
   methods: {
-    selectTopic(lang) {
-      if (this.selectedTopics.filter(t => t === lang) <= 0) {
-        this.selectedTopics.push(lang)
+    selectTopic(topic) {
+      if (this.selectedTopics.filter(t => t === topic) <= 0) {
+        this.selectedTopics.push(topic)
         this.ratingsExpanded = true
       }
     },
-    deselectTopic(lang) {
-      this.selectedTopics = this.selectedTopics.filter(t => t !== lang)
+    deselectTopic(topic) {
+      this.selectedTopics = this.selectedTopics.filter(t => t !== topic)
+    },
+    filterDifficultiesByTopic(topic) {
+      let state = this
+      questions.getTopicsDifficulties(this.selectedTopics)
+        .then(values => {
+          state.difficulties = categories.difficultyRatings.filter(d => values.filter(v => v === d.key).length > 0)
+        })
+        .catch(error => {
+          console.debug(error)
+          state.difficulties = categories.difficultyRatings
+        })
+    },
+    filterCategoriesByTopic(topic) {
+      let state = this
+      questions.getTopicsCategories(this.selectedTopics)
+        .then(values => {
+          state.allCategories = categories.categories.filter(c => values.filter(v => v === c.key).length > 0)
+        })
+        .catch(error => {
+          console.debug(error)
+          state.allCategories = categories.categories
+        })
     },
     toggleTopic(lang) {
       if (this.isTopicSelected(lang)) {
@@ -215,6 +241,8 @@ export default {
       } else {
         this.selectTopic(lang)
       }
+      this.filterDifficultiesByTopic(lang)
+      this.filterCategoriesByTopic(lang)
     },
     isTopicSelected(lang) {
       return this.selectedTopics.filter(t => t === lang).length > 0
