@@ -108,77 +108,77 @@
     "slug": "what-other-protocols-work-on-an-anchor-tag-s-href-attribute",
     "title": "What other protocols work on an anchor tag's href attribute?",
     "url": "/html/other-href-protocols.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "true-or-false-you-can-set-margin-on-a-br-tag",
     "title": "True or False. You can set margin on a br tag.",
     "url": "/html/margin-on-br-tag.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
   },
   {
     "slug": "what-is-the-highest-section-heading",
     "title": "What is the highest section heading?",
     "url": "/html/highest-section-heading.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "what-should-the-form-attribute-on-a-button-be-set-to",
     "title": "What should the form attribute on a button be set to?",
     "url": "/html/form-attribute-on-button.html",
-    "categories": ["easy"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
   },
   {
     "slug": "what-are-the-elements-allowed-within-the-head-element",
     "title": "What are the elements allowed within the head element?",
     "url": "/html/elements-allowed-within-head.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "hard"
   },
   {
     "slug": "true-or-false-each-instance-of-an-iframe-on-a-page-has-its-own-session-history",
     "title": "True or False. Each instance of an iframe on a page has its own session history.",
     "url": "/html/does-iframe-have-its-own-history.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "what-is-the-default-xmlns-value-on-html",
     "title": "What is the default xmlns value on html?",
     "url": "/html/default-xmlns-value.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "hard"
   },
   {
     "slug": "true-or-false-a-canvas-element-is-just-as-accessible-as-other-html-elements",
     "title": "True or False. A canvas element is just as accessible as other HTML elements.",
     "url": "/html/canvas-accessibility.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "a-button-that-displays-an-icon-instead-of-text-should-also",
     "title": "A button that displays an icon instead of text should also...?",
     "url": "/html/button-with-icon.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "why-shouldn-t-you-use-br-tags-for-creating-paragraphs",
     "title": "Why shouldn't you use br tags for creating paragraphs?",
     "url": "/html/brs-for-paragraph-tags.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "medium"
   },
   {
     "slug": "what-is-an-accessibility-enhancement-for-an-img-element",
     "title": "What is an accessibility enhancement for an img element?",
     "url": "/html/accessibility-enhancement-to-img.html",
-    "categories": ["html"],
+    "categories": ["html", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
   }
 ]
