@@ -19,6 +19,9 @@ export default {
       showAnswer: false
     }
   },
+  mounted: function () {
+    
+  },
   computed: {
     toggleText: function () {
       if (this.showAnswer) {
@@ -47,6 +50,8 @@ export default {
         path: '/quiz/',
         query: params
       })
+
+      // this.$site.themeConfig.questions.push(1)
     }
   }
 }

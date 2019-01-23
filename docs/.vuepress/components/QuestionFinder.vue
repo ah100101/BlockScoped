@@ -95,7 +95,7 @@
     a.find-button(
       v-bind:class='{ "disabled": !selectionValid }'
       v-on:click='findQuestion'
-      ) Get Question
+      ) Get a Question
   transition(name='fade')
     .warning.custom-block(v-show='noResults')
       p(class="custom-block-title")
@@ -149,9 +149,17 @@ export default {
   mounted: function () {
     this.topics = divideArrayInto3(categories.topics)
 
-    if (!!this.$route.query.topics && this.$route.query.topics.length > 0 
-      && categories.topics.filter(l => this.$route.query.topics.filter(t => t === l.key).length > 0).length > 0) {
-        this.selectedTopics = this.$route.query.topics
+    let queryTopics = this.$route.query.topics
+
+    if (!queryTopics) {
+      queryTopics = []
+    } else if (!queryTopics.filter) {
+      queryTopics = [queryTopics]
+    }
+
+    if (!!queryTopics && queryTopics.length > 0 
+      && categories.topics.filter(l => queryTopics.filter(t => t === l.key).length > 0).length > 0) {
+        this.selectedTopics = queryTopics
         this.ratingsExpanded = true
     }
 
@@ -269,6 +277,9 @@ export default {
       return this.selectedCategories.filter(r => r === category).length > 0
     },
     findQuestion() {
+      if (!window.quiz) {
+        window.quiz = []
+      }
       let state = this
       if (this.selectedTopics.length > 0) {
         questions.getRandomQuestion({
@@ -278,6 +289,7 @@ export default {
         })
         .then(result => {
           if (result && result.url) {
+            window.quiz.push(result)
             state.$router.push({
               path: result.url,
               query: state.getParameters()

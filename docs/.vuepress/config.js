@@ -21,5 +21,6 @@ module.exports = {
     ],
     lastUpdated: 'Last Updated',
     repo: 'ah100101/BlockScoped',
+    questions: []
   }
 }
