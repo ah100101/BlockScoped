@@ -69,8 +69,7 @@ const getRandomQuestion = questionRequest => {
 
     if (questionRequest.difficulty && questionRequest.difficulty.length > 0) {
       filteredQuestions = filteredQuestions.filter(
-        q1 =>
-          questionRequest.difficulty.filter(q2 => q2 === q1.difficulty).length > 0
+        q1 => questionRequest.difficulty.filter(q2 => q2 === q1.difficulty).length > 0
       )
     }
 
@@ -80,15 +79,24 @@ const getRandomQuestion = questionRequest => {
 
     if (questionRequest.categories && questionRequest.categories.length > 0) {
       filteredQuestions = filteredQuestions.filter(
-        q1 =>
-          questionRequest.categories.filter(
-            c1 => q1.categories.filter(c2 => c1 === c2).length > 0
-          ).length > 0
+        q1 => questionRequest.categories.filter(
+          c1 => q1.categories.filter(c2 => c1 === c2).length > 0
+        ).length > 0
       )
     }
 
     if (filteredQuestions.length === 0) {
       reject('No question found after category filter applied')
+    }
+
+    if (window.quiz && window.quiz.length > 0) {
+      filteredQuestions = filteredQuestions.filter(
+        q => window.quiz.filter(qz => q.slug !== qz.slug).length > 0 
+      )
+    }
+
+    if (filteredQuestions.length === 0) {
+      reject('All questions have been asked')
     }
 
     const randomIndex = getRandomInt(0, filteredQuestions.length - 1)
