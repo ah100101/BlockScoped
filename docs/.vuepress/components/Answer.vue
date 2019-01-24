@@ -10,29 +10,43 @@
       h2(class='answer') Answer
       slot
   .find-question
+    .find-options
+      span(class='num-answered' v-html='countText')
+    .find-options
       a(class='find' v-on:click='findMore()') Find another question
-      span(class='num-answered') 11 Questions Answered 🎉
+      a(class='find' v-on:click='startOver()') Start Over
 </template>
 
 <script>
 import categories from '../categories.js'
 import questions from '../questions.js'
+import countText from '../countText.js'
 
 export default {
-  data () {
-    return { 
-      showAnswer: false
-    }
+  data() {
+    return {
+      showAnswer: false,
+      quizCount: window.quiz ? window.quiz.length : 0
+    };
   },
   computed: {
-    toggleText: function () {
+    toggleText: function() {
       if (this.showAnswer) {
         return 'Hide Answer ↑'
       }
       return 'Show Answer ↓'
+    },
+    countText: function () {
+      return countText.getCountText(this.quizCount)
     }
   },
   methods: {
+    startOver() {
+      window.quiz = []
+      this.$router.push({
+        path: '/quiz/'
+      })
+    },
     findMore() {
       let params = {}
 
@@ -60,58 +74,82 @@ export default {
         if (!params.topics.filter) {
           params.topics = [params.topics]
         }
-        
-        selectedTopics = categories.topics.filter(t => params.topics.filter(p => p === t.key).length > 0)
+
+        selectedTopics = categories.topics
+          .filter(t => params.topics.filter(p => p === t.key).length > 0)
+          .map(t => t.key)
 
         if (params.difficulty) {
           if (!params.difficulty.filter) {
             params.difficulty = [params.difficulty]
           }
 
-          selectedDifficulty = categories.difficultyRatings.filter(t => params.difficulty.filter(p => p === t.key).length > 0)
+          selectedDifficulty = categories.difficultyRatings
+            .filter(t => params.difficulty.filter(p => p === t.key).length > 0)
+            .map(t => t.key)
         }
 
         if (params.categories) {
           if (!params.categories.filter) {
-            params.categories = [params.categories]
+            params.categories = [params.categories];
           }
 
-          selectedCategories = categories.categories.filter(t => params.categories.filter(p => p === t.key).length > 0)
+          selectedCategories = categories.categories.filter(
+            t => params.categories.filter(p => p === t.key).length > 0
+          )
         }
 
         let state = this
 
-        questions.getRandomQuestion({
-          topics: selectedTopics,
-          categories: selectedCategories,
-          difficulty: selectedDifficulty,
-        })
-        .then(result => {
-          if (result && result.url) {
-            window.quiz.push(result)
-            state.$router.push({
-              path: result.url,
-              query: state.getParameters()
-            })
-          }
-        })
-        .catch(error => {
-          console.debug(error)
-          // TODO handle no results
-          // state.noResults = true
-        })
+        if (!window.quiz) {
+          window.quiz = []
+        }
+
+        questions
+          .getRandomQuestion({
+            topics: selectedTopics,
+            categories: selectedCategories,
+            difficulty: selectedDifficulty
+          })
+          .then(result => {
+            if (result && result.url) {
+              window.quiz.push(result);
+              state.$router.push({
+                path: result.url,
+                query: state.getParameters()
+              })
+            }
+          })
+          .catch(error => {
+            console.debug(error)
+            // TODO handle no results
+            // state.noResults = true
+          })
+      }
+    },
+    getParameters() {
+      return {
+        topics: this.$route.query.topics,
+        difficulty: this.$route.query.difficulty,
+        categories: this.$route.query.categories
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
+// this sucks adding it here - need to add to global styles
+.page-edit {
+  margin-bottom: 3rem;
+}
+
 .answer {
   a {
     cursor: pointer;
   }
-  
+
+
   .toggle {
     font-size: 1.35rem;
   }
@@ -122,8 +160,9 @@ export default {
     left: 0;
     bottom: 0;
     z-index: 1;
-    padding: .5rem;
+    padding: 0.5rem;
     background: #fff;
+    border-top: 1px solid #eaecef;
   }
 
   .find {
@@ -137,22 +176,30 @@ export default {
     box-sizing: border-box;
     border-bottom: 1px solid #3badc0;
     font-weight: inherit;
+    margin: .25rem;
   }
-  
+
   a.find:hover {
     text-decoration: none;
     background-color: #60bece;
   }
 
-  .num-answered {
-    padding: 0 .5rem;
+  .find-options {
+    width: fit-content;
+    margin: 0 auto;
   }
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+  .num-answered {
+    padding: 0 0.5rem;
   }
-  
-  .fade-enter, .fade-leave-to {
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
     opacity: 0;
   }
 }
