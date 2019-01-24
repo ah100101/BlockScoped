@@ -26,8 +26,15 @@ export default {
   data() {
     return {
       showAnswer: false,
-      quizCount: window.quiz ? window.quiz.length : 0
+      quizCount: 0
     };
+  },
+  mounted: function () {
+    if (!window.quiz) {
+      window.quiz = []
+    }
+
+    this.quizCount = window.quiz.length
   },
   computed: {
     toggleText: function() {
