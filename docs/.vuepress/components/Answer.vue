@@ -9,8 +9,10 @@
     .answer-text(v-if='showAnswer')
       h2(class='answer') Answer
       slot
-      a(v-on:click='findMore()') Find another question
-</template>  
+  .find-question
+      a(class='find' v-on:click='findMore()') Find another question
+      span(class='num-answered') 11 Questions Answered 🎉
+</template>
 
 <script>
 export default {
@@ -60,6 +62,38 @@ export default {
   
   .toggle {
     font-size: 1.35rem;
+  }
+
+  .find-question {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: .5rem;
+    background: #fff;
+  }
+
+  .find {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4eb7c9;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+    border-bottom: 1px solid #3badc0;
+    font-weight: inherit;
+  }
+  
+  a.find:hover {
+    text-decoration: none;
+    background-color: #60bece;
+  }
+
+  .num-answered {
+    padding: 0 .5rem;
   }
 
   .fade-enter-active, .fade-leave-active {
