@@ -15,6 +15,9 @@
 </template>
 
 <script>
+import categories from '../categories.js'
+import questions from '../questions.js'
+
 export default {
   data () {
     return { 
@@ -45,10 +48,59 @@ export default {
         params.categories = this.$route.query.categories
       }
 
-      this.$router.push({
-        path: '/quiz/',
-        query: params
-      })
+      if (!params.topics) {
+        this.$router.push({
+          path: '/quiz/'
+        })
+      } else {
+        let selectedTopics = []
+        let selectedDifficulty = []
+        let selectedCategories = []
+
+        if (!params.topics.filter) {
+          params.topics = [params.topics]
+        }
+        
+        selectedTopics = categories.topics.filter(t => params.topics.filter(p => p === t.key).length > 0)
+
+        if (params.difficulty) {
+          if (!params.difficulty.filter) {
+            params.difficulty = [params.difficulty]
+          }
+
+          selectedDifficulty = categories.difficultyRatings.filter(t => params.difficulty.filter(p => p === t.key).length > 0)
+        }
+
+        if (params.categories) {
+          if (!params.categories.filter) {
+            params.categories = [params.categories]
+          }
+
+          selectedCategories = categories.categories.filter(t => params.categories.filter(p => p === t.key).length > 0)
+        }
+
+        let state = this
+
+        questions.getRandomQuestion({
+          topics: selectedTopics,
+          categories: selectedCategories,
+          difficulty: selectedDifficulty,
+        })
+        .then(result => {
+          if (result && result.url) {
+            window.quiz.push(result)
+            state.$router.push({
+              path: result.url,
+              query: state.getParameters()
+            })
+          }
+        })
+        .catch(error => {
+          console.debug(error)
+          // TODO handle no results
+          // state.noResults = true
+        })
+      }
     }
   }
 }
