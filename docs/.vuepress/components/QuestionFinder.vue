@@ -302,6 +302,7 @@ export default {
         })
       }
     },
+    // todo: move into mixin for answers as well
     getParameters() {
       let params = {
         topics: this.selectedTopics
