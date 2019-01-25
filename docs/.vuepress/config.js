@@ -4,6 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href:'/images/logo.png' }]
   ],
+  serviceWorker: true,
   themeConfig: {
     nav: [
       { 
