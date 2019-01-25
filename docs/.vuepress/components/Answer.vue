@@ -194,6 +194,7 @@ export default {
   .find-options {
     width: fit-content;
     margin: 0 auto;
+    padding: .25rem;
   }
 
   .num-answered {
