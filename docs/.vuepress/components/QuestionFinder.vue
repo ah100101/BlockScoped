@@ -277,9 +277,6 @@ export default {
       return this.selectedCategories.filter(r => r === category).length > 0
     },
     findQuestion() {
-      if (!window.quiz) {
-        window.quiz = []
-      }
       let state = this
       if (this.selectedTopics.length > 0) {
         questions.getRandomQuestion({
@@ -289,7 +286,6 @@ export default {
         })
         .then(result => {
           if (result && result.url) {
-            window.quiz.push(result)
             state.$router.push({
               path: result.url,
               query: state.getParameters()
