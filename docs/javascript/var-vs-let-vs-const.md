@@ -40,11 +40,11 @@ The `const` declaration creates a read-only reference to a value. It does not me
 
   <template slot='reference'>
 
-  `Var`: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+  `Var`: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
-  `Let`: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+  `Let`: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
-  `Const`: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+  `Const`: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
   </template>
 

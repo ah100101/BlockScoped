@@ -28,7 +28,7 @@ A primitive (primitive value, primitive data type) is data that is not an object
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 
   </template>
 

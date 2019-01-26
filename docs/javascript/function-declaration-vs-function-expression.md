@@ -56,9 +56,9 @@
 
   <template slot='reference'>
 
-  [Mozilla: function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+  [Mozilla Developer Network: function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
-  [Mozilla: function expression](https://developer.mozilla.org/en-US/docs/web/JavaScript/Reference/Operators/function)
+  [Mozilla Developer Network: function expression](https://developer.mozilla.org/en-US/docs/web/JavaScript/Reference/Operators/function)
 
   </template>
 

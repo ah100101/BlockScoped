@@ -28,7 +28,7 @@
 
   <template slot='reference'>
 
-  [Mozilla](url)
+  [Mozilla Developer Network](url)
 
   </template>
 

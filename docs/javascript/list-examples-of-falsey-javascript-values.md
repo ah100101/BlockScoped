@@ -35,7 +35,7 @@
 
   <template slot='reference'>
 
-  Reference: [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+  Reference: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
   </template>
 

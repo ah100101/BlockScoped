@@ -28,7 +28,7 @@
   
   <template slot='reference'>
 
-  [Mozilla: Closures - Lexical Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Lexical_scoping)
+  [Mozilla Developer Network: Closures - Lexical Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Lexical_scoping)
 
   </template>
 

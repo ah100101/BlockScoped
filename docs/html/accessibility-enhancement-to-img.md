@@ -34,7 +34,7 @@
 
   <template slot='reference'>
 
-  [Mozilla: img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Accessibility_concerns)
+  [Mozilla Developer Network: img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Accessibility_concerns)
 
   </template>
 

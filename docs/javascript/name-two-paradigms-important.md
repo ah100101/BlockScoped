@@ -28,7 +28,7 @@
 
   <template slot='reference'>
   
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
   </template>
 

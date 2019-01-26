@@ -6,6 +6,7 @@
   slot(name='difficulty')
   answer
     slot(name='answer')
+    h4 Reference:
     slot(name='reference')
 </template>  
 

@@ -61,7 +61,7 @@ Output:
 
   <template slot='reference'>
 
-  [Mozilla: set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+  [Mozilla Developer Network: set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
   </template>
 

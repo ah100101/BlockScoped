@@ -28,9 +28,9 @@ The `Object.create()` method creates a new object, using an existing object as t
 
   <template slot='reference'>
 
-  [Mozilla: Object.create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+  [Mozilla Developer Network: Object.create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
-  [Mozilla: Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+  [Mozilla Developer Network: Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
   </template>
 
