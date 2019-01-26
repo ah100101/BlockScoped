@@ -19,10 +19,18 @@ module.exports = {
           { text: 'HTML', link: '/html/' },
           { text: 'CSS', link: '/css/'}
         ]
+      },
+      {
+        text: 'Contributing',
+        items: [
+          { text: 'Overview', link: '/contributing/' },
+          { text: 'Request New Question Topic', link: 'https://github.com/ah100101/BlockScoped/issues/new?title=New+Topic+Request:[topic%20name]&labels=enhancement&assignee=ah100101' },
+          { text: 'Submit Issue', link: 'https://github.com/ah100101/BlockScoped/issues/new'},
+          { text: 'View Current Issues', link: 'https://github.com/ah100101/BlockScoped/issues' }
+        ]
       }
     ],
     lastUpdated: 'Last Updated',
-    repo: 'ah100101/BlockScoped',
-    questions: []
+    repo: 'ah100101/BlockScoped'
   }
 }
