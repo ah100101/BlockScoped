@@ -38,7 +38,7 @@
 
   <template slot='reference'>
 
-  [Mozilla: Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+  [Mozilla Developer Network: Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
   </template>
 

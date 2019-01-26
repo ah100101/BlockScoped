@@ -42,7 +42,7 @@ console.log(person.fullName); // 'John Smith'
 
   <template slot='reference'>
 
-  [Mozilla: get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+  [Mozilla Developer Network: get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
 
   </template>
 

@@ -33,7 +33,7 @@
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 
   </template>
 

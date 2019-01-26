@@ -28,7 +28,7 @@ A `method` is a function that is also the property of an object. A `function` do
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
   </template>
 

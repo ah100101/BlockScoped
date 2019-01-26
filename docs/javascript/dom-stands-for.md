@@ -28,7 +28,7 @@
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
   </template>
 

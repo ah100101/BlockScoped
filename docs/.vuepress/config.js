@@ -21,9 +21,11 @@ module.exports = {
         ]
       },
       {
-        text: 'Contributing',
+        text: 'About',
         items: [
-          { text: 'Overview', link: '/contributing/' },
+          { text: 'Contributing', link: '/about/contributing/' },
+          { text: 'Privacy Policy', link: '/about/privacy/' },
+          { text: 'Contact', link: '/about/contact/' },
           { text: 'Request New Question Topic', link: 'https://github.com/ah100101/BlockScoped/issues/new?title=New+Topic+Request:[topic%20name]&labels=enhancement&assignee=ah100101' },
           { text: 'Submit Issue', link: 'https://github.com/ah100101/BlockScoped/issues/new'},
           { text: 'View Current Issues', link: 'https://github.com/ah100101/BlockScoped/issues' }

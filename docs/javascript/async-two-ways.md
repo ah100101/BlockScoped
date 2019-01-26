@@ -34,7 +34,7 @@
 
   <template slot='reference'>
 
-  [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
   </template>
 
