@@ -1,4 +1,4 @@
-const gaId = process.env.GA_CODE || 'UA-ID'
+const gaId = process.env.GA_ID || 'UA-ID'
 
 module.exports = {
   title: 'BlockScoped',
