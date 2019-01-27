@@ -190,7 +190,7 @@
   },
   {
     "slug": "describe-the-use-case-for-promise-all",
-    "title": "#\nDescribe the use case for Promise.all?",
+    "title": "Describe the use case for Promise.all?",
     "url": "/javascript/promise-all-definition.html",
     "categories": ["javascript", "nocomputer", "nowhiteboard"],
     "difficulty": "easy"
