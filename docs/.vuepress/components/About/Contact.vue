@@ -47,7 +47,7 @@ textarea {
   display: block;
   border-radius: 1rem;
   width: 100%;
-  padding: 0;
+  padding: .5rem;
 }
 
 button {
