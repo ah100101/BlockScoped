@@ -101,9 +101,9 @@ export default {
             params.categories = [params.categories];
           }
 
-          selectedCategories = categories.categories.filter(
-            t => params.categories.filter(p => p === t.key).length > 0
-          )
+          selectedCategories = categories.categories
+            .filter(t => params.categories.filter(p => p === t.key).length > 0)
+            .map(t => t.key)
         }
 
         let state = this
