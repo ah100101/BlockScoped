@@ -155,27 +155,3 @@ After questions are added, they must be added to `docs/.vuepress/questionsData/[
     "difficulty": "easy"
   },
 ```
-
-Or if you want to pop open dev tools, you can run this script on the page to generate this json (not the prettiest, but it works):
-
-```javascript
-JSON.stringify(
-    Array.from(document.querySelectorAll('h2:not(.answer)')).map((h, i) => {
-      return {
-        slug: h.id,
-        title: h.outerText.replace('# ', ''),
-        url: h.baseURI.replace('http://localhost:8080', ''),
-        categories: Array.from(
-          Array.from(document.getElementsByClassName('categories'))[
-            i
-          ].querySelectorAll('span')
-        ).map(s => s.dataset.key),
-        difficulty: Array.from(
-          Array.from(document.getElementsByClassName('difficulty'))[
-            i
-          ].querySelectorAll('.rating')
-        ).map(r => r.dataset.key)[0]
-      }
-    })[0]
-  )
-```
