@@ -1,5 +1,5 @@
 <template>
-  <form name="contact" method="POST" data-netlify="true" netlify>
+  <form name="contact" method="POST" data-netlify="true" action="/about/contact/success.html">
     <h3>Contact Us</h3>
     <div>
       <p>
