@@ -41,8 +41,7 @@ module.exports = {
       {
         text: 'About',
         items: [
-          { text: 'Privacy Policy', link: '/about/privacy/' },
-          { text: 'Contact', link: '/about/contact/' }
+          { text: 'Privacy Policy', link: '/about/privacy/' }
         ]
       }
     ],
