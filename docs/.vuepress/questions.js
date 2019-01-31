@@ -52,6 +52,57 @@ const getQuestionList = topicKey => {
   return questions[topicKey]
 }
 
+const getQuestionCount = questionRequest => {
+  if (!questionRequest || !questionRequest.topics || questionRequest.topics.length <= 0) {
+    console.error('Invalid Parameters provided.')
+  }
+  return new Promise((resolve, reject) => {
+    let validTopics = questionRequest.topics.filter(t => !!questions[t])
+
+    if (!validTopics && validTopics.length <= 0) {
+      reject('Invalid language provided for question')
+    }
+
+    let filteredQuestions = validTopics.reduce((acc, topic) => {
+      return acc.concat(JSON.parse(JSON.stringify(questions[topic])))
+    }, [])
+
+    if (questionRequest.difficulty && questionRequest.difficulty.length > 0) {
+      filteredQuestions = filteredQuestions.filter(
+        q1 => questionRequest.difficulty.filter(q2 => q2 === q1.difficulty).length > 0
+      )
+    }
+
+    if (filteredQuestions.length === 0) {
+      resolve(0)
+    }
+
+    if (questionRequest.categories && questionRequest.categories.length > 0) {
+      filteredQuestions = filteredQuestions.filter(
+        q1 => questionRequest.categories.filter(
+          c1 => q1.categories.filter(c2 => c1 === c2).length > 0
+        ).length > 0
+      )
+    }
+
+    if (filteredQuestions.length === 0) {
+      resolve(0)
+    }
+
+    if (window.quiz && window.quiz.length > 0) {
+      filteredQuestions = filteredQuestions.filter(
+        q => window.quiz.filter(qz => q.slug !== qz.slug).length > 0 
+      )
+    }
+
+    if (filteredQuestions.length === 0) {
+      resolve(0)
+    }
+
+    resolve(filteredQuestions.length)
+  })
+}
+
 const getRandomQuestion = questionRequest => {
   if (!questionRequest || !questionRequest.topics || questionRequest.topics.length <= 0) {
     console.error('Invalid Parameters provided.')
@@ -170,9 +221,17 @@ const getTopicsCategories = topics => {
     })
 }
 
+const getTotalQuestionCount = () => {
+  return getQuestionList('javascript').length 
+  + getQuestionList('css').length
+  + getQuestionList('html').length
+}
+
 export default {
   getRandomQuestion,
+  getQuestionCount,
   getQuestionList,
   getTopicsDifficulties,
-  getTopicsCategories
+  getTopicsCategories,
+  getTotalQuestionCount
 }

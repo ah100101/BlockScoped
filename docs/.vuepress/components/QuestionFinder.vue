@@ -95,7 +95,10 @@
     a.find-button(
       v-bind:class='{ "disabled": !selectionValid }'
       v-on:click='findQuestion'
-      ) Get a Question
+      ) Get a Question 
+      span(v-if="showQuestionCount") ({{currentQuestionMax}})
+    .question-count
+      span from {{totalQuestionCount}} total questions
   transition(name='fade')
     .warning.custom-block(v-show='noResults')
       p(class="custom-block-title")
@@ -143,7 +146,9 @@ export default {
       selectedCategories: [],
       ratingsExpanded: false,
       categoriesExpanded: false,
-      noResults: false
+      noResults: false,
+      currentQuestionMax: questions.getTotalQuestionCount(),
+      totalQuestionCount: questions.getTotalQuestionCount()
     }
   },
   mounted: function () {
@@ -187,6 +192,9 @@ export default {
     }
   },
   computed: {
+    showQuestionCount: function () {
+      return this.currentQuestionMax > 0 && this.selectedTopics.length > 0
+    },
     categories: function () {
       return divideArrayInto3(this.allCategories)
     },
@@ -251,6 +259,7 @@ export default {
       }
       this.filterDifficultiesByTopic(lang)
       this.filterCategoriesByTopic(lang)
+      this.updateCurrentQuestionCount()
     },
     isTopicSelected(lang) {
       return this.selectedTopics.filter(t => t === lang).length > 0
@@ -262,6 +271,7 @@ export default {
         this.selectedDifficulties.push(rating)
         this.categoriesExpanded = true
       }
+      this.updateCurrentQuestionCount()
     },
     difficultySet(rating) {
       return this.selectedDifficulties.filter(r => r === rating).length > 0
@@ -272,9 +282,26 @@ export default {
       } else {
         this.selectedCategories.push(category)
       }
+      this.updateCurrentQuestionCount()
     },
     categorySet(category) {
       return this.selectedCategories.filter(r => r === category).length > 0
+    },
+    updateCurrentQuestionCount() {
+      let state = this
+      if (this.selectedTopics.length > 0) {
+        questions.getQuestionCount({
+          topics: this.selectedTopics,
+          categories: this.selectedCategories,
+          difficulty: this.selectedDifficulties,
+        })
+        .then(result => {
+          this.currentQuestionMax = result
+        })
+        .catch(error => {
+          console.debug(error)
+        })
+      }
     },
     findQuestion() {
       let state = this
@@ -340,14 +367,14 @@ export default {
       display: inline-block;
       width: 100%;
       color: #fff;
-      background-color: #4eb7c9;
+      background-color: #a1b3b6;
       padding: 0.5rem 1.3rem;
       margin: .25rem;
       border-radius: 4px;
       box-sizing: border-box;
       cursor: pointer;
       transition: background-color 0.1s ease;
-      box-shadow: 0 2px 0 #3c93a2;
+      box-shadow: 0 2px 0 #999;
       top: 2px;
     }
 
@@ -376,16 +403,17 @@ export default {
     border-top: 1px solid #eaecef;
 
     a.find-button {
-      margin: 2rem;
+      margin: 1rem 2rem;
       display: inline-block;
       min-width: 33%;
       color: #fff;
       background-color: #4eb7c9;
-      padding: 0.5rem 1.3rem;
+      padding: 1rem 1.8rem;
       border-radius: 4px;
       box-sizing: border-box;
       cursor: pointer;
       text-decoration: none;
+      font-size: 1.2rem;
     }
 
     a.find-button:hover {
