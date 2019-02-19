@@ -34,7 +34,7 @@ module.exports = {
         items: [
           { text: 'Overview', link: '/contributing/' },
           { text: 'Request New Question Topic', link: 'https://github.com/ah100101/BlockScoped/issues/new?title=New+Topic+Request:[topic%20name]&labels=enhancement&assignee=ah100101' },
-          { text: 'Submit Issue', link: 'https://github.com/ah100101/BlockScoped/issues/new'},
+          { text: 'Submit Issue', link: 'https://github.com/ah100101/BlockScoped/issues/new?assignees=&labels=&template=bug_report.md&title='},
           { text: 'View Current Issues', link: 'https://github.com/ah100101/BlockScoped/issues' }
         ]
       },
