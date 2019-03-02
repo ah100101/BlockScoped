@@ -1,5 +1,7 @@
 # {?} [BlockScoped](http://blockscoped.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1eb955ad-f307-4055-bcec-d0f7f53c2c7c/deploy-status)](https://app.netlify.com/sites/blockscoped/deploys)
+
 ## Random coding questions by topic and difficulty
 
 ### 😇 Contributing new questions (and answers)
