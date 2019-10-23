@@ -2,7 +2,7 @@
 
   <template slot='question'>
 
-  ## Name 5 different type of for loops in Javascript, how they are different, and which one(s) may have the worst performance when iterating over an array?
+  ## Name 5 different types of for loops in Javascript, how they are different, and which one(s) may have the worst performance when iterating over an array?
 
   </template>
 
@@ -38,7 +38,7 @@ do
 while (condition);
 ```
 
-  3. `white` statement
+  3. `while` statement
 
 ```
 while (condition)
