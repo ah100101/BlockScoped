@@ -10,5 +10,5 @@ features:
   details: BlockScoped is now a PWA! All content on the site can be accessed offline and added to your phone's homescreen for easy quizzing.
 - title: Open Sourced
   details: BlockScoped's library of questions are open sourced on GitHub. Wish there were more CSS interview questions? Contribute!
-footer: MIT Licensed | Copyright © 2018
+footer: MIT Licensed | Copyright © 2022
 ---
